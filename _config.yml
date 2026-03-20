@@ -1,0 +1,22 @@
+title: Veille Technologique TP3
+description: Veille technologique
+lang: fr
+locale: fr-CA
+author:
+  name: Antoine Bergeron, Maxime Michaud, Justin Lavigueur, Alexandre Sweeney-Lantin
+
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "default"
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
+
+exclude:
+  - index.html
+  - Gemfile
+  - Gemfile.lock
+  - vendor

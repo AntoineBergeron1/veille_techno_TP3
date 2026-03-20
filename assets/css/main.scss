@@ -1,0 +1,206 @@
+---
+---
+
+@import "minimal-mistakes/skins/default";
+@import "minimal-mistakes";
+
+/* Typography - Google Fonts */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  color: #1a1a2e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.88em;
+}
+
+/* Hide MM default elements (single-page report, not a blog) */
+.masthead {
+  display: none;
+}
+
+.page__title {
+  display: none;
+}
+
+.page__footer {
+  display: none;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+/* Report header */
+.report-header {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(to bottom, #f8fafc, #fff);
+
+  h1 {
+    font-size: 2rem;
+    color: #1a202c;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    color: #718096;
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+  }
+}
+
+/* Experiment cards */
+.experiment {
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #3182ce;
+  border-radius: 6px;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  background: #f8fafc;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+
+  h3 {
+    margin-top: 0;
+    color: #2d3748;
+  }
+
+  h4 {
+    color: #4a5568;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Placeholder boxes */
+.placeholder {
+  background: #fff8e0;
+  border: 1px dashed #d4a900;
+  padding: 0.8rem;
+  margin: 0.8rem 0;
+  font-style: italic;
+  color: #7a6000;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+/* Wider content area */
+#main {
+  @media (min-width: 1280px) {
+    max-width: 1600px;
+  }
+}
+
+/* Better tables */
+table {
+  display: table;
+  overflow-x: auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+
+  th {
+    background: #2d3748;
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  tr:nth-child(even) {
+    background: #f7fafc;
+  }
+
+  tr:hover {
+    background: #edf2f7;
+  }
+}
+
+/* Figcaption */
+figcaption {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: 0.3rem;
+  text-align: center;
+}
+
+/* Section headings accent */
+h2 {
+  border-bottom: 2px solid #3182ce;
+  padding-bottom: 0.3rem;
+}
+
+/* Anchor links on hover */
+.anchor-link {
+  opacity: 0;
+  margin-left: 0.3em;
+  color: #a0aec0;
+  text-decoration: none;
+  font-weight: 400;
+  transition: opacity 0.15s;
+  font-size: 0.85em;
+}
+
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link {
+  opacity: 1;
+}
+
+/* Better blockquotes */
+blockquote {
+  border-left: 4px solid #3182ce;
+  background: #ebf8ff;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  color: #2c5282;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Print styles */
+@media print {
+  .report-nav,
+  .masthead,
+  .page__footer,
+  .sidebar,
+  .toc {
+    display: none !important;
+  }
+  .experiment {
+    break-inside: avoid;
+    box-shadow: none;
+    border-left-color: #333;
+  }
+  body {
+    font-size: 11pt;
+    color: #000;
+  }
+  table th {
+    background: #ddd;
+    color: #000;
+  }
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
