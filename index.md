@@ -14,8 +14,7 @@ toc_sticky: true
 
 ## Présentation
 
-blablabla
-blablablabla
+Le but de ce projet est de configurer un Raspberry pi dans l’optique de surveiller l’état d’une plante. Dans un premier temps, nous voulons que le programme analyse l’état général de la plante et avertir l’utilisateur en cas de problème tout en lui proposant des solutions. Les éléments à vérifier sont l’hydratation de la plante et le niveau de luminosité de la plante. Dans un deuxième temps, nous voulons que le programme puisse arroser automatiquement la plante dans le cas où celle-ci ne serait pas suffisamment hydratée.  Dans un troisième temps, nous voulons qu’une caméra puisse prendre plusieurs photos de la plante à des intervalles régulières afin de créer un «Time lapse » de la plante. Ces images seront enregistrées afin de pouvoir être analysées pour détecter des changements. Dans un quatrième temps, nous voulons que toutes les images, les données récupérées ainsi que l’état de la plante soit présenté sur une page web afin que l’utilisateur puisse analyser tout ce que le programme détecte.
 
 ---
 
