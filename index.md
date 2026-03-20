@@ -1,6 +1,9 @@
 ---
-layout: default
-title: "Nom du projet"
+layout: single
+title: Veille Technologique TP3
+toc: true
+toc_label: "Table des matières"
+toc_sticky: true
 ---
 
 # Nom du projet
