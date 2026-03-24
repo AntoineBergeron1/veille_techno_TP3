@@ -46,7 +46,7 @@ Le but de ce projet est de configurer un Raspberry Pi afin de surveiller l’ét
 
 ## Expérimentations
 
-### Expérimentation 1 — Titre
+### Expérimentation 1 — Test du capteur de luminosité
 
 | Champ | Détail |
 |-------|--------|
@@ -83,7 +83,72 @@ blablbalbblalba
 
 ---
 
-### Expérimentation 2 — Titre
+### Expérimentation 2 — Capture d’images avec la caméra 
+
+| Champ | Détail |
+|-------|--------|
+| **Réalisée par** | — |
+| **Technologie(s)** | — |
+| **Objectif** | — |
+
+#### Contexte de réalisation
+
+1. Étape 1
+2. Étape 2
+3. Étape 3
+
+#### Photos / Vidéos
+
+#### Résultat
+
+#### Avis sur la technologie
+
+- **Forces** : —
+- **Faiblesses** : —
+- **Potentiel** : —
+- **Limites** : —
+
+#### Avis final (1 des 2)
+
+> **Validation de l'hypothèse** — blablablabla
+
+> **Technologie insatisfaisante** — blablablabla
+
+---
+
+### Expérimentation 3 — Génération d’un time-lapse avec ffmpeg 
+
+| Champ | Détail |
+|-------|--------|
+| **Réalisée par** | — |
+| **Technologie(s)** | — |
+| **Objectif** | — |
+
+#### Contexte de réalisation
+
+1. Étape 1
+2. Étape 2
+3. Étape 3
+
+#### Photos / Vidéos
+
+#### Résultat
+
+#### Avis sur la technologie
+
+- **Forces** : —
+- **Faiblesses** : —
+- **Potentiel** : —
+- **Limites** : —
+
+#### Avis final (1 des 2)
+
+> **Validation de l'hypothèse** — blablablabla
+
+> **Technologie insatisfaisante** — blablablabla
+
+---
+### Expérimentation 4 — Analyse d’images avec OpenCV
 
 | Champ | Détail |
 |-------|--------|
