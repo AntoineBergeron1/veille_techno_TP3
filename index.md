@@ -181,7 +181,38 @@ blablbalbblalba
 > **Technologie insatisfaisante** — blablablabla
 
 ---
+### Expérimentation 5 — Notifications
 
+| Champ | Détail |
+|-------|--------|
+| **Réalisée par** | — |
+| **Technologie(s)** | — |
+| **Objectif** | — |
+
+#### Contexte de réalisation
+
+1. Étape 1
+2. Étape 2
+3. Étape 3
+
+#### Photos / Vidéos
+
+#### Résultat
+
+#### Avis sur la technologie
+
+- **Forces** : —
+- **Faiblesses** : —
+- **Potentiel** : —
+- **Limites** : —
+
+#### Avis final (1 des 2)
+
+> **Validation de l'hypothèse** — blablablabla
+
+> **Technologie insatisfaisante** — blablablabla
+
+---
 ## Sources
 
 1. [Titre de la source](https://exemple.com) — Description courte
