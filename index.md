@@ -28,10 +28,10 @@ Finalement, le projet Yggdrasil lie plusieurs technologies comme des capteurs, u
 | Champ | Détail |
 |-------|--------|
 | **Fabricant** | Raspberry Pi Foundation |
-| **Modèle** | — |
-| **Spécifications** |  |
-| **Usage prévu** | On se sert du Raspberry PI comme système principal du projet pour lire les capteurs (luminosité, humidité), contrôler une caméra, traiter les données et héberger sur notre serveur web |
-| **Justification du choix** | L'outil technologique nommé Raspberry Pi est tenace, pas cher et très polyvalent. Il permet de faire énormément de choses comme se connecter facilement à des capteurs et à une caméra grâce aux GPIO, tout en étant capable d’exécuter des programmes en langage Python et des bibliothèques comme OpenCV et Flask |
+| **Modèle** | Raspberry Pi 4 Model B 4GB RAM |
+| **Spécifications** | Le Raspberry Pi 4 Model B est équipé d’un processeur quad-core Cortex-A72 64 bits cadencé à 1,5 GHz, de 4 Go de RAM LPDDR4, du Wi-Fi 802.11 b/g/n/ac, du Bluetooth 5.0, de ports USB 3.0 et 2.0, de deux ports micro HDMI qui peut supporter jusqu’à 4K, d’un port Ethernet Gigabit et des broches GPIO pour connecter des capteurs. |
+| **Usage prévu** | On se sert du Raspberry PI comme système principal du projet pour lire les capteurs, contrôler une caméra, traiter les données et héberger sur notre serveur web |
+| **Justification du choix** | Le Raspberry Pi a été choisi parce qu’il est simple à utiliser, peu coûteux et très polyvalent. Il permet de connecter facilement différents capteurs et une caméra grâce aux broches GPIO, ce qui est essentiel pour notre projet. De plus, il est assez puissant pour exécuter plusieurs programmes en même temps comme la lecture des capteurs, le traitement d’images avec OpenCV et l’hébergement d’un serveur web. C’est aussi un outil vraiment populaire dans les projets informatiques dont il existe beaucoup de documentation et d’exemples pour nous aider en cas de problème. Finalement, sa petite taille et sa faible consommation en énergie en font une solution pratique pour un petit système qui doit fonctionner en continu. |
 | **Expérimenté par** | |
 
 ### Technologie 2 — Nom de la technologie
