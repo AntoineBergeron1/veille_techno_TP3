@@ -20,21 +20,21 @@ Dans un premier temps, on utilise un **capteur de luminosité** pour mesurer la 
 
 Dans un deuxième temps, on utilise une **caméra** pour prendre des photos de la plante à intervalles réguliers, comme toutes les 15 minutes. Les images sont automatiquement enregistrées dans le système, ce qui permet de suivre l’évolution de la plante sans avoir besoin de la surveiller en permanence.
 
-Dans un troisième temps, toutes ces images sont utilisées pour créer une vidéo ==time-lapse== grâce à **ffmpeg**. Cette vidéo permet de voir la croissance de la plante en accéléré, ce qui rend les changements beaucoup plus visibles et faciles à analyser.
+Dans un troisième temps, toutes ces images sont utilisées pour créer une vidéo <mark>time-lapse</mark> grâce à **ffmpeg**. Cette vidéo permet de voir la croissance de la plante en accéléré, ce qui rend les changements beaucoup plus visibles et faciles à analyser.
 
 Dans un quatrième temps, on utilise **OpenCV** pour analyser les images automatiquement. Par exemple, on peut détecter des changements dans la couleur des feuilles, comme du vert vers du jaune. Cela permet au système de donner des indications sur l’**état de santé de la plante**.
 
 Dans un cinquième temps, les données collectées, comme la **luminosité** et l’**humidité**, sont enregistrées dans des fichiers **CSV** ou **JSON**. Cela permet de garder un historique des données et de pouvoir les consulter plus tard pour analyser l’évolution de la plante.
 
-Dans un sixième temps, on crée une ==interface web== avec **Flask** pour afficher toutes les informations du système. L’utilisateur peut voir les données des capteurs, les images capturées et l’état général de la plante directement dans une page web simple et facile à comprendre.
+Dans un sixième temps, on crée une <mark>interface web</mark> avec **Flask** pour afficher toutes les informations du système. L’utilisateur peut voir les données des capteurs, les images capturées et l’état général de la plante directement dans une page web simple et facile à comprendre.
 
 Dans un septième temps, on teste le **capteur d’humidité** en comparant des conditions de sol sec et humide. Cela permet de voir si les valeurs sont cohérentes et de définir un seuil, par exemple en dessous d’une certaine valeur, pour déclencher automatiquement l’**arrosage de la plante**.
 
-Dans un huitième temps, on met en place un ==système de notifications== pour avertir l’utilisateur en cas de problème. Par exemple, si la plante manque d’eau ou de lumière, un message peut s’afficher sur l’interface web pour indiquer qu’une action est nécessaire.
+Dans un huitième temps, on met en place un <mark>système de notifications</mark> pour avertir l’utilisateur en cas de problème. Par exemple, si la plante manque d’eau ou de lumière, un message peut s’afficher sur l’interface web pour indiquer qu’une action est nécessaire.
 
 Dans un neuvième temps, on effectue des **tests de performance et de stabilité** en laissant le système fonctionner pendant plusieurs heures ou plusieurs jours. Cela permet de vérifier qu’il n’y a pas de bugs, que le programme ne ralentit pas et que tout fonctionne correctement sur le long terme.
 
-Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteurs, une caméra, du traitement d’images, du stockage de données, une interface web et de l’automatisation dans le but de créer un ==système complet, intelligent et autonome== pour la surveillance des plantes.
+Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteurs, une caméra, du traitement d’images, du stockage de données, une interface web et de l’automatisation dans le but de créer un <mark>système complet, intelligent et autonome</mark> pour la surveillance des plantes.
 
 
 ---
