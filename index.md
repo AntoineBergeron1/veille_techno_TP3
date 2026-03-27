@@ -32,7 +32,7 @@ Finalement, le projet Yggdrasil lie plusieurs technologies comme des capteurs, u
 | **Spécifications** | Le Raspberry Pi 4 Model B est équipé d’un processeur quad-core Cortex-A72 64 bits cadencé à 1,5 GHz, de 4 Go de RAM LPDDR4, du Wi-Fi 802.11 b/g/n/ac, du Bluetooth 5.0, de ports USB 3.0 et 2.0, de deux ports micro HDMI qui peut supporter jusqu’à 4K, d’un port Ethernet Gigabit et des broches GPIO pour connecter des capteurs. Voici un lien pour la documentation du Raspberry PI :  |
 | **Usage prévu** | On se sert du Raspberry PI comme système principal du projet pour lire les capteurs, contrôler une caméra, traiter les données et héberger sur notre serveur web |
 | **Justification du choix** | Le Raspberry Pi a été choisi parce qu’il est simple à utiliser, peu coûteux et très polyvalent. Il permet de connecter facilement différents capteurs et une caméra grâce aux broches GPIO, ce qui est essentiel pour notre projet. De plus, il est assez puissant pour exécuter plusieurs programmes en même temps comme la lecture des capteurs, le traitement d’images avec OpenCV et l’hébergement d’un serveur web. C’est aussi un outil vraiment populaire dans les projets informatiques dont il existe beaucoup de documentation et d’exemples pour nous aider en cas de problème. Finalement, sa petite taille et sa faible consommation en énergie en font une solution pratique pour un petit système qui doit fonctionner en continuellement. |
-| **Lien vers la documentation** | [Lien vers la fiche technique du Raspberry PI](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/) |
+| **Lien vers la documentation** | [Fiche technique du Raspberry Pi](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/) |
 | **Expérimenté par** | Les 4 membres de notre équipe |
 
 ### Technologie 2 — Raspberry PI Camera Module 3
@@ -42,10 +42,24 @@ Finalement, le projet Yggdrasil lie plusieurs technologies comme des capteurs, u
 | **Fabricant** | Raspberry Pi Foundation |
 | **Modèle** | Raspberry PI Camera Module 3 |
 | **Spécifications** | Caméra de 12 mégapixels (Sony IMX708), support de l’autofocus, capture d’images et de vidéos HD, compatibilité avec le Raspberry Pi via le port CSI. Elle a aussi un sensor diagonal large de 7.4mm et une angle de vue de 75 degrès |
-| **Usage prévu** | La caméra est utilisée pour prendre des photos de la plante à intervalles réguliers. Ces images permettent de suivre son évolution dans le temps et de créer un time-lapse de sa croissance. |
+| **Usage prévu** | La caméra est utilisée pour prendre des photos de la plante à intervalles réguliers. Ces images permettent de suivre son évolution dans le temps et de créer un time-lapse de sa croissance. On va l'utiliser pour l'expérimentation 2 et 3. |
 | **Justification du choix** | Cette caméra de la même compagnie que notre première technologie a été choisie par notre équipe parce qu’elle est compatible directement avec le Raspberry Pi et facile à installer. Elle offre une bonne qualité d’image, ce qui est important pour observer les changements de la plante. En plus de ça, elle supporte l’autofocus, ce qui permet d’avoir des images plus claires sans ajustement manuel et elle est aussi bien documentée. |
-| **Lien vers la documentation** | [Lien vers la fiche technique du Raspberry PI](https://www.raspberrypi.com/products/camera-module-3/) |
+| **Lien vers la documentation** | [Caméra Module 3 du Raspberry PI](https://www.raspberrypi.com/products/camera-module-3/) |
 | **Expérimenté par** | — |
+
+
+### Technologie 3 — Capteur de luminosité (LDR)
+
+| Champ | Détail |
+|-------|--------|
+| **Fabricant** | Générique (C'est un module compatible avec Arduino et Raspberry Pi) |
+| **Modèle** | Capteur de luminosité LDR de type KY-018|
+| **Spécifications** | C'est un capteur basé sur une photorésistance (LDR) qui varie sa résistance selon la lumière avec une sortie analogique ou numérique, une alimentation 3.3V ou 5V, 3 broches (VCC, GND, Signal) |
+| **Usage prévu** | Le capteur de luminosité est utilisé pour mesurer la quantité de lumière autour de la plante. Il permet de déterminer si la plante reçoit assez de lumière ou si elle est dans un environnement trop sombre. On va l'utiliser pour l'expérimentation 1. |
+| **Justification du choix** | Ce capteur est simple à utiliser, peu coûteux et efficace pour détecter les variations de luminosité. Il est idéal et parfait pour un projet comme celui-ci puisqu’il permet de prendre des décisions automatiques basées sur la lumière. |
+| **Lien vers la documentation** | [Caméra Module 3 du Raspberry PI](https://www.raspberrypi.com/products/camera-module-3/) |
+| **Expérimenté par** | — |
+
 
 ---
 
@@ -56,7 +70,7 @@ Finalement, le projet Yggdrasil lie plusieurs technologies comme des capteurs, u
 | Champ | Détail |
 |-------|--------|
 | **Réalisée par** |  |
-| **Technologie(s)** |  |
+| **Technologie(s)** | Raspberry Pi et Capteur de luminosité (LDR) |
 | **Objectif** |  |
 
 #### Contexte de réalisation
