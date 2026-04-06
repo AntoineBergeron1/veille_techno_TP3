@@ -87,34 +87,35 @@ Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteur
 
 | Champ | Détail |
 |-------|--------|
-| **Réalisée par** |  |
-| **Technologie(s)** | Raspberry Pi et Capteur de luminosité (LDR) |
-| **Objectif** |  |
+| **Réalisée par** | Alexande |
+| **Technologie(s)** | Arduino uno r3 et Capteur de luminosité (LDR) |
+| **Objectif** | Vérifier si le capteur de luminosité permet de mesurer correctement la quantité de lumière autour d'une plante et de déterminer si elle reçoit suffisamment de lumière pour sa croissance |
 
 #### Contexte de réalisation
 
-blablablbalbalba :
+Cette expérimentation a été réalisée avec un Arduino Uno R3 à la place d'un Raspberry Pi, puisque le capteur de lumière utilisé est un capteur analogique et que l'Arduino possède des broches analogiques natives
 
-1. Étape 1
-2. Étape 2
-3. Étape 3
+1. J'ai branché le capteur sur l'Arduino Uno R3 : la broche **S** sur **A0**, le **+** sur **5V** et le **–** sur **GND**.
+2. Ensuite j'ai coder l'Arduino pour lire les valeurs du capteur et les afficher dans le moniteur série. 
+3. J'ai fini par définir des seuils de luminosité pour classifier l'environnement de la plante : trop sombre (< 200), lumière faible (200–500), bonne lumière (500–800) et plein soleil (> 800).
 
 #### Photos / Vidéos
 
 #### Résultat
 
-blablbalbblalba
+Le capteur fonctionne correctement et réagit bien aux variations de lumière. En couvrant le capteur avec la doigt, les valeurs chutent significativement, ce qui confirme qu'il détecte bien les changements de luminosité. Le système affiche un message indiquant l'état de la lumière pour la plante, par exemple "Bonne lumière" ou "Trop sombre".
+
 
 #### Avis sur la technologie
 
-- **Forces** : —
-- **Faiblesses** : —
+- **Forces** : Le capteur est très simple à brancher, peu coûteux et réagit très bien aux changements de lumière
+- **Faiblesses** : Contrairement au Raspberry Pi, l'Arduino ne peut pas envoyer des notifications automatiques pour indiquer si la plante n'a pas asser de lumière
 - **Potentiel** : —
-- **Limites** : —
+- **Limites** : Le capteur mesure uniquement la luminosité ambiante générale
 
 #### Avis final (1 des 2)
 
-> **Validation de l'hypothèse** — blablablabla
+> **Validation de l'hypothèse** — L'expérimentation montre que le capteur est capable de mesurer la luminosité autour d'une plante et de donner des indications sur la quantité de lumière
 
 > **Technologie insatisfaisante** — blablablblablalba
 
