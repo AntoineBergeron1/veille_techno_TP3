@@ -158,11 +158,8 @@ blablbalbblalba
 | Champ | Détail |
 |-------|--------|
 | **Réalisée par** | Justin Lavigueur |
-| **Technologie(s)** | Les technologies que je vais utiliser pour cette expérimentation sont ffmpeg, qui est un logiciel en ligne de commande permettant de traiter des fichiers multimédias comme des vidéos et des images. 
-Je vais aussi utiliser des images JPEG que j’ai prises de ma plante de jade avec mon téléphone et transférées sur mon ordinateur personnel. 
-En plus de ça, j’utilise mon ordinateur personnel avec un terminal PowerShell pour exécuter les commandes ffmpeg. 
-Finalement, j’utilise un dossier local que j’ai créé pour organiser mes images afin de pouvoir les assembler correctement en vidéo. |
-| **Objectif** | Mon objectif pour l'expérimentation est de vérifier s’il est possible de créer une vidéo time-lapse à partir d’une série de photos d’une plante quelconque (dans mon expérimentation, je vais utiliser ma plante de jade que j'ai chez moi. |
+| **Technologie(s)** | - **ffmpeg** : logiciel en ligne de commande pour traiter des vidéos et images<br>- Images **JPEG** prises avec mon téléphone (plante de jade)<br>- Ordinateur personnel avec **PowerShell**<br>- Dossier local pour organiser les images |
+| **Objectif** | Vérifier s’il est possible de créer une vidéo **time-lapse** à partir d’une série de photos d’une plante (plante de jade utilisée pour ce test) |
 
 #### Contexte de réalisation en étapes
 
