@@ -157,32 +157,37 @@ blablbalbblalba
 
 | Champ | Détail |
 |-------|--------|
-| **Réalisée par** | — |
-| **Technologie(s)** | — |
-| **Objectif** | — |
+| **Réalisée par** | Justin Lavigueur |
+| **Technologie(s)** | Les technologies que je vais utiliser pour cette expérimentation sont ffmpeg, qui est un logiciel en ligne de commande permettant de traiter des fichiers multimédias comme des vidéos et des images. 
+Je vais aussi utiliser des images JPEG que j’ai prises de ma plante de jade avec mon téléphone et transférées sur mon ordinateur personnel. 
+En plus de ça, j’utilise mon ordinateur personnel avec un terminal PowerShell pour exécuter les commandes ffmpeg. 
+Finalement, j’utilise un dossier local que j’ai créé pour organiser mes images afin de pouvoir les assembler correctement en vidéo. |
+| **Objectif** | Mon objectif pour l'expérimentation est de vérifier s’il est possible de créer une vidéo time-lapse à partir d’une série de photos d’une plante quelconque (dans mon expérimentation, je vais utiliser ma plante de jade que j'ai chez moi. |
 
-#### Contexte de réalisation
+#### Contexte de réalisation en étapes
 
-1. Étape 1
-2. Étape 2
-3. Étape 3
+1. J’ai commencé par installer ffmpeg et vérifier qu’il fonctionne correctement dans mon terminal powershell avec une commande simple.
+2. Ensuite, j’ai pris plusieurs photos de ma plante de jade en essayant de garder le même cadrage et la même position pour chaque photo. J’ai ensuite placé toutes les images dans un même dossier en nommant chaque photo selon l'ordre de leur prise.
+3. Finalement, j’ai utilisé ffmpeg pour transformer les images en vidéo time-lapse de format mp4 en utilisant une commande dans le terminal de mon dossier de photos.
 
 #### Photos / Vidéos
+Photos de ma plante de jade prises en série et deux vidéos générées : une avec 20 photos et une autre avec 30 photos.
 
 #### Résultat
+Les deux vidéos ont bien été créées. Celle avec 30 photos est plus fluide que celle avec 20 photos. 
+Par contre, comme les photos ont été prises sur une courte période, le changement dans la plante n’est pas très visible, donc l’effet time-lapse reste limité.
 
 #### Avis sur la technologie
 
-- **Forces** : —
-- **Faiblesses** : —
-- **Potentiel** : —
-- **Limites** : —
+- **Forces** : Je trouve que ffmpeg est rapide et permet de créer facilement une vidéo à partir d’images. J'ai pas eu beaucoup de complications qaund je l'ai utilisé même si c'était la première fois que je l'utilisais. Une fois qu’on comprend la commande, ça va vraiment vite et en plus de ça, c'est complètement gratuit donc pour moi, c'est un plus.
+- **Faiblesses** : Ce n’est pas très intuitif au début parce que tout se fait en ligne de commande. Il faut aussi bien organiser minutieusement ses images dans un ordre parfait comme image1, image2 sinon ça ne fonctionne tout simplement pas.
+- **Potentiel** : Cette technologie est très utile pour mon projet parce qu’elle me permettrait de créer automatiquement des vidéos pour montrer l’évolution de ma plante sur plusieurs jours ou semaines.
+- **Limites** : Le résultat des vidéos faites par ffmpeg dépend beaucoup du nombre de photos et du temps entre chaque photo. Si les photos sont prises trop rapprochées dans le temps, on ne voit presque pas de changement direct.
 
 #### Avis final (1 des 2)
 
-> **Validation de l'hypothèse** — blablablabla
+> **Validation de l'hypothèse** — Cette expérimentation montre que ffmpeg fonctionne bien pour créer un time-lapse. mes deux tests (20 et 30 photos) confirment que plus il y a d’images, plus la vidéo est fluide, ce qui valide l’utilisation de cette technologie pour notre projet Yggdrasil.
 
-> **Technologie insatisfaisante** — blablablabla
 
 ---
 ### Expérimentation 4 — Analyse d’images avec OpenCV
