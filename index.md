@@ -158,10 +158,13 @@ blablbalbblalba
 | Champ | Détail |
 |-------|--------|
 | **Réalisée par** | Justin Lavigueur |
-| **Technologie(s)** | - **ffmpeg** : logiciel en ligne de commande pour traiter des vidéos et images<br>- Images **JPEG** prises avec mon téléphone (plante de jade)<br>- Ordinateur personnel avec **PowerShell**<br>- Dossier local pour organiser les images |
-| **Objectif** | Vérifier s’il est possible de créer une vidéo **time-lapse** à partir d’une série de photos d’une plante (plante de jade utilisée pour ce test) |
+| **Technologie(s)** | - **ffmpeg** : logiciel en ligne de commande pour traiter des vidéos et images<br>- Images **JPEG** prises avec mon téléphone sur ma plante de jade<br>- Mon ordinateur personnel avec **PowerShell**<br>- Un dossier local pour organiser mes images |
+| **Objectif** | Mon objectif pour l'expérimentation est de vérifier s’il est possible de créer une vidéo time-lapse à partir d’une série de photos d’une plante quelconque (dans mon expérimentation, je vais utiliser ma plante de jade que j'ai chez moi. |
+
 
 #### Contexte de réalisation en étapes
+Cette expérimentation a été réalisée sur mon ordinateur après avoir installé ffmpeg. J’ai pris plusieurs photos de ma plante de jade avec mon téléphone dans le même angle pour que ça reste constant. 
+Ensuite, j’ai voulu tester deux cas : une vidéo avec 20 photos et une autre avec 30 photos pour voir la différence dans le résultat.
 
 1. J’ai commencé par installer ffmpeg et vérifier qu’il fonctionne correctement dans mon terminal powershell avec une commande simple.
 2. Ensuite, j’ai pris plusieurs photos de ma plante de jade en essayant de garder le même cadrage et la même position pour chaque photo. J’ai ensuite placé toutes les images dans un même dossier en nommant chaque photo selon l'ordre de leur prise.
