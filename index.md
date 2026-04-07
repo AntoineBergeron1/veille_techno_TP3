@@ -90,9 +90,12 @@ Cette expérimentation a été réalisée avec un Arduino Uno R3 à la place d'u
 3. J'ai fini par définir des seuils de luminosité pour classifier l'environnement de la plante : trop sombre (< 200), lumière faible (200–500), bonne lumière (500–800) et plein soleil (> 800).
 
 #### Photos / Vidéos
-![Branchement arduino](veille_techno_TP3/img/Alex/photo1.png)
-![Branchement capteur](img/Alex/photo2.png)
-![Vidéo](img/Alex/video.mp4)
+![Branchement arduino](img/Alex/photo1.jpg)
+![Branchement capteur](img/Alex/photo2.jpg)
+
+<video controls width="600">
+  <source src="img/Alex/video.mp4" type="video/mp4">
+</video>
 
 #### Résultat
 
