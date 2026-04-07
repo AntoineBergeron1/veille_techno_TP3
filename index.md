@@ -257,9 +257,6 @@ Par contre, comme les photos ont été prises sur une courte période, le change
 ---
 ## Sources
 
-1. [Titre de la source](https://exemple.com) — Description courte
-2. [Titre de la source](https://exemple.com) — Description courte
-3. [Titre de la source](https://exemple.com) — Description courte
-2. [Titre de la source](https://exemple.com) — Description courte
-3. [Titre de la source](https://exemple.com) — Description courte
-2. [Titre de la source](https://exemple.com) — Description courte
+1. [Raspberry Pi 4 Model B Specifications](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/) — Documentation officielle du Raspberry Pi qui décrit les caractéristiques techniques et les capacités de la carte utilisée dans le projet.
+2. [Raspberry Pi Camera Module 3](https://www.raspberrypi.com/products/camera-module-3/) — Page officielle présentant les spécifications de la caméra utilisée pour la capture d’images dans le projet.
+3. [FFmpeg Documentation](https://ffmpeg.org/documentation.html) — Documentation officielle de ffmpeg expliquant comment traiter des images et créer des vidéos avec les time-lapses.
