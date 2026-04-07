@@ -192,38 +192,48 @@ Cependant, comme les photos ont été prises sur une courte période, les change
 
 
 ---
+
+
 ### Expérimentation 4 — Analyse d’images avec OpenCV
 
 | Champ | Détail |
 |-------|--------|
 | **Réalisée par** | Antoine Bergeron |
-| **Technologie(s)** | OpenCv et Visual Studio Code |
-| **Objectif** | Comprendre le fonctionnement d'OpenCV, réussir à analyser l'évolution d'une plante sur le temps. |
+| **Technologie(s)** | OpenCV et Visual Studio Code |
+| **Objectif** | Comprendre le fonctionnement d'OpenCV et réussir à analyser l'évolution d'une plante dans le temps |
+
 
 #### Contexte de réalisation
-Cette expérimentation a été réalisé sur visual studio code dans un projet python qui utilisait OpenCV. OpenCV permet d'analyser des images. Justin a pris des images de sa plante de Jade, j'ai donc utilisé OpenCV pour tenter d'analyser l'évolution de sa couleur et de sa taille. J'ai également fait un teste image par image afin d'apprendre au programme à distinguer une plante du reste dans une photo (Il distingue la couleur verte de la plante du reste des couleurs. 
 
-1. Installation d'OpenCV. Dans le terminal du projet Python ou dans un terminal Powershell : pip install opencv-python pour OpenCv
-2.Installation de l'interface : pip install matplotlib. Cette installation permet d'afficher une interface contenant un graphique représentant l'évolution de résultats.
-3. Analyse d'une image: J'ai ensuite créé un projet nommé analyse_image.py qui permet d'analyser une image. Ce fichier permet de distinguer la plante du reste dans une image. Le programme analyse les couleurs présentes dans la photo et repère les couleurs correspondantes à celles déterminées. Dans mon cas, je lui ai demandé de distinguer le vert de la plante. Le programme réussit donc à trouver la plante sur la photo. Il encadre ensuite la plante. Ce test n'est pas forcément utile pour le projet final, mais nous utiliserons ce même principe pour détecter un problème avec la plante. Nous allons donc pouvoir détecter des taches qui apparaissent, une feuille qui change de couleur, une partie de la plante qui est morte, etc. Comme ce n'était pas le cas sur les photos actuelles et qu'il n'y avait aucune tache, il était impossible de tester cette fonctionnalité pour l'instant.
-4. Analyse de l'évolution des couleurs: Dans un deuxième programme nommé analyse_couleur.py, j'ai passé en boucle le dossier d'images et j'ai demandé au programme de vérifier l'évolution de la couleur de la plante au fil du temps. Il vérifie comment le vert de la plante évolue. Dans ce contexte, les images ont été prises la même journée, donc l'évolution est assez stable pour l'instant.
-5. Analyse de l'évolution de la taille: Dans un projet nommé analyse_taille.py, j'ai analysé l'évolution de la taille de la plante. Le programme analyse le nombre de pixels que fait la plante (Exemple : la plante fait 500 pixels de haut). Je passe donc en boucle le dossier d'images, le programme suit donc l'évolution de la taille de la plante au fil du temps. Dans ce contexte, nous avons pris les photos avec un téléphone. Les données sont donc erronées, puisque l'angle de la photo, la distance avec la plante, l'ombrage et la qualité des images influencent le résultat. Dans le projet final, les photos seront prises avec une caméra stable et fixée sur un support. Les données ne seront donc pas faussées.
+Cette expérimentation a été réalisée sur **Visual Studio Code** dans un projet Python utilisant <mark>OpenCV</mark>. Cette technologie permet d’analyser des images automatiquement. Justin a pris des images de sa plante de jade, j’ai donc utilisé OpenCV pour tenter d’analyser l’évolution de sa couleur et de sa taille. J’ai également fait un test image par image afin d’apprendre au programme à distinguer une plante du reste dans une photo, en détectant la couleur verte.
+
+1. Installation d’OpenCV : dans le terminal du projet Python ou dans PowerShell avec la commande `pip install opencv-python`.
+2. Installation de l’interface : `pip install matplotlib`. Cette installation permet d’afficher une interface avec un graphique représentant l’évolution des résultats.
+3. Analyse d’une image : j’ai ensuite créé un projet nommé `analyse_image.py` qui permet d’analyser une image. Le programme distingue la plante du reste en détectant les couleurs présentes, principalement le vert. Il encadre ensuite la plante dans l’image. Ce test n’est pas forcément utile pour le projet final, mais il permet de comprendre le fonctionnement de la détection. Nous pourrons ensuite détecter des problèmes comme des taches, des changements de couleur ou des parties mortes. Comme il n’y avait aucun problème visible sur les photos actuelles, cette fonctionnalité n’a pas pu être testée complètement.
+4. Analyse de l’évolution des couleurs : dans un deuxième programme nommé `analyse_couleur.py`, j’ai parcouru un dossier d’images pour analyser l’évolution de la couleur de la plante dans le temps. Le programme observe les variations du vert. Comme les images ont été prises la même journée, les résultats sont assez stables.
+5. Analyse de l’évolution de la taille : dans un projet nommé `analyse_taille.py`, j’ai analysé la taille de la plante en fonction du nombre de pixels. Le programme parcourt les images et suit l’évolution de la taille. Cependant, comme les photos ont été prises avec un téléphone, les données sont imprécises à cause de l’angle, de la distance et de l’éclairage. Dans le projet final, une caméra fixe sera utilisée pour obtenir des données plus fiables.
+
+---
 
 #### Photos / Vidéos
 
-Résultat
-Les tests ont fonctionné, nous pouvons facilement suivre l'évolution de la plante. Par contre, comme les photos ont été prises le même jour, l'évolution est assez stable pour l'instant.
+
+#### Résultat
+
+Les tests ont fonctionné et permettent de suivre l’évolution de la plante. Cependant, comme les images ont été prises sur une courte période, les changements restent très limités.
+
 
 #### Avis sur la technologie
 
-- **Forces** : — OPenCv permet d'analyser assez facilement les photos. C'est assez instinctif à comprendre et assez facile à apprendre la première fois.
-- **Faiblesses** : — l'affichage des images est assez limité. Lorsque la fenêtre est en plein écran, l'image n'est pas centrée, nous devons nous même le faire. La taille de l'image doit être ajustée manuellement, sinon elle est trop grande. Donc, sur des écrans de tailles différentes, il est possible que le rendu soit plus ou moins beau. Si l'écran est petit, l'image ne va pas s'adapter à la fenêtre, elle serait simplement trop grande. 
-- **Potentiel** : — sur une longue période de  et avec une configuration matérielle et logicielle parfaite, l'évolution de la plante sera bien représentée.
-- **Limites** : — s'il y a un seul problème de matériel ou de logiciel, les données peuvent être complètements faussées.
+- **Forces** : <mark>OpenCV</mark> permet d’analyser facilement les images. C’est une technologie assez intuitive et relativement simple à apprendre pour une première utilisation.
+- **Faiblesses** : L’affichage des images est limité. L’image n’est pas toujours bien centrée et la taille doit être ajustée manuellement. Sur différents écrans, le rendu peut varier et ne s’adapte pas automatiquement.
+- **Potentiel** : Sur une longue période et avec une configuration stable, l’évolution de la plante pourra être représentée de façon précise.
+- **Limites** : Si les conditions de prise d’image ne sont pas constantes, les données peuvent être faussées.
+
 
 #### Avis final (1 des 2)
 
-> **Validation de l'hypothèse** — Cette technologie permet de faire tout ce que nous voulions faire, elle analyse les évolutions de couleur et de temps ainsi que les changements anormaux de la plante. 
+> **Validation de l'hypothèse** — Cette expérimentation montre que <mark>OpenCV</mark> permet d’analyser l’évolution d’une plante, notamment au niveau de la couleur et de la taille, ainsi que de détecter certains changements anormaux.
 
 
 ---
