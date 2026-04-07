@@ -77,7 +77,7 @@ Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteur
 
 | Champ | Détail |
 |-------|--------|
-| **Réalisée par** | Alexandre |
+| **Réalisée par** | Alexandre Sweeney-Lantin |
 | **Technologie(s)** | Arduino uno r3 et Capteur de luminosité (LDR) KY-018 |
 | **Objectif** | Vérifier si le capteur de luminosité permet de mesurer correctement la quantité de lumière autour d'une plante et de déterminer si elle reçoit suffisamment de lumière pour sa croissance |
 
@@ -100,7 +100,7 @@ Le capteur fonctionne correctement et réagit bien aux variations de lumière. E
 
 - **Forces** : Le capteur est très simple à brancher, peu coûteux et réagit très bien aux changements de lumière
 - **Faiblesses** : Contrairement au Raspberry Pi, l'Arduino ne peut pas envoyer des notifications automatiques pour indiquer si la plante n'a pas asser de lumière
-- **Potentiel** : —
+- **Potentiel** : Le capteur pourrait transmettre ses données à un Raspberry Pi ce qui permettrait d'envoyer des notifications automatiques
 - **Limites** : Le capteur mesure uniquement la luminosité ambiante générale
 
 #### Avis final (1 des 2)
