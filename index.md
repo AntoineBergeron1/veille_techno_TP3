@@ -189,64 +189,35 @@ Par contre, comme les photos ont été prises sur une courte période, le change
 
 | Champ | Détail |
 |-------|--------|
-| **Réalisée par** | — |
-| **Technologie(s)** | — |
-| **Objectif** | — |
+| **Réalisée par** | Antoine Bergeron |
+| **Technologie(s)** | OpenCv et Visual Studio Code |
+| **Objectif** | Comprendre le fonctionnement d'OpenCV, réussir à analyser l'évolution d'une plante sur le temps. |
 
 #### Contexte de réalisation
+Cette expérimentation a été réalisé sur visual studio code dans un projet python qui utilisait OpenCV. OpenCV permet d'analyser des images. Justin a pris des images de sa plante de Jade, j'ai donc utilisé OpenCV pour tenter d'analyser l'évolution de sa couleur et de sa taille. J'ai également fait un teste image par image afin d'apprendre au programme à distinguer une plante du reste dans une photo (Il distingue la couleur verte de la plante du reste des couleurs. 
 
-1. Étape 1
-2. Étape 2
-3. Étape 3
+1. Installation d'OpenCV. Dans le terminal du projet Python ou dans un terminal Powershell : pip install opencv-python pour OpenCv
+2.Installation de l'interface : pip install matplotlib. Cette installation permet d'afficher une interface contenant un graphique représentant l'évolution de résultats.
+3. Analyse d'une image: J'ai ensuite créé un projet nommé analyse_image.py qui permet d'analyser une image. Ce fichier permet de distinguer la plante du reste dans une image. Le programme analyse les couleurs présentes dans la photo et repère les couleurs correspondantes à celles déterminées. Dans mon cas, je lui ai demandé de distinguer le vert de la plante. Le programme réussit donc à trouver la plante sur la photo. Il encadre ensuite la plante. Ce test n'est pas forcément utile pour le projet final, mais nous utiliserons ce même principe pour détecter un problème avec la plante. Nous allons donc pouvoir détecter des taches qui apparaissent, une feuille qui change de couleur, une partie de la plante qui est morte, etc. Comme ce n'était pas le cas sur les photos actuelles et qu'il n'y avait aucune tache, il était impossible de tester cette fonctionnalité pour l'instant.
+4. Analyse de l'évolution des couleurs: Dans un deuxième programme nommé analyse_couleur.py, j'ai passé en boucle le dossier d'images et j'ai demandé au programme de vérifier l'évolution de la couleur de la plante au fil du temps. Il vérifie comment le vert de la plante évolue. Dans ce contexte, les images ont été prises la même journée, donc l'évolution est assez stable pour l'instant.
+5. Analyse de l'évolution de la taille: Dans un projet nommé analyse_taille.py, j'ai analysé l'évolution de la taille de la plante. Le programme analyse le nombre de pixels que fait la plante (Exemple : la plante fait 500 pixels de haut). Je passe donc en boucle le dossier d'images, le programme suit donc l'évolution de la taille de la plante au fil du temps. Dans ce contexte, nous avons pris les photos avec un téléphone. Les données sont donc erronées, puisque l'angle de la photo, la distance avec la plante, l'ombrage et la qualité des images influencent le résultat. Dans le projet final, les photos seront prises avec une caméra stable et fixée sur un support. Les données ne seront donc pas faussées.
 
 #### Photos / Vidéos
 
-#### Résultat
+Résultat
+Les tests ont fonctionné, nous pouvons facilement suivre l'évolution de la plante. Par contre, comme les photos ont été prises le même jour, l'évolution est assez stable pour l'instant.
 
 #### Avis sur la technologie
 
-- **Forces** : —
-- **Faiblesses** : —
-- **Potentiel** : —
-- **Limites** : —
+- **Forces** : — OPenCv permet d'analyser assez facilement les photos. C'est assez instinctif à comprendre et assez facile à apprendre la première fois.
+- **Faiblesses** : — l'affichage des images est assez limité. Lorsque la fenêtre est en plein écran, l'image n'est pas centrée, nous devons nous même le faire. La taille de l'image doit être ajustée manuellement, sinon elle est trop grande. Donc, sur des écrans de tailles différentes, il est possible que le rendu soit plus ou moins beau. Si l'écran est petit, l'image ne va pas s'adapter à la fenêtre, elle serait simplement trop grande. 
+- **Potentiel** : — sur une longue période de  et avec une configuration matérielle et logicielle parfaite, l'évolution de la plante sera bien représentée.
+- **Limites** : — s'il y a un seul problème de matériel ou de logiciel, les données peuvent être complètements faussées.
 
 #### Avis final (1 des 2)
 
-> **Validation de l'hypothèse** — blablablabla
+> **Validation de l'hypothèse** — Cette technologie permet de faire tout ce que nous voulions faire, elle analyse les évolutions de couleur et de temps ainsi que les changements anormaux de la plante. 
 
-> **Technologie insatisfaisante** — blablablabla
-
----
-### Expérimentation 5 — Notifications
-
-| Champ | Détail |
-|-------|--------|
-| **Réalisée par** | — |
-| **Technologie(s)** | — |
-| **Objectif** | — |
-
-#### Contexte de réalisation
-
-1. Étape 1
-2. Étape 2
-3. Étape 3
-
-#### Photos / Vidéos
-
-#### Résultat
-
-#### Avis sur la technologie
-
-- **Forces** : —
-- **Faiblesses** : —
-- **Potentiel** : —
-- **Limites** : —
-
-#### Avis final (1 des 2)
-
-> **Validation de l'hypothèse** — blablablabla
-
-> **Technologie insatisfaisante** — blablablabla
 
 ---
 ## Sources
