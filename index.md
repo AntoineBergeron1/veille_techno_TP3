@@ -69,8 +69,8 @@ Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteur
 | **Spécifications** | C'est un capteur basé sur une photorésistance (LDR) qui varie sa résistance selon la lumière avec une sortie analogique ou numérique, une alimentation 3.3V ou 5V, 3 broches (VCC, GND, Signal) |
 | **Usage prévu** | Le capteur de luminosité est utilisé pour mesurer la quantité de lumière autour de la plante. Il permet de déterminer si la plante reçoit assez de lumière ou si elle est dans un environnement trop sombre. On va l'utiliser pour l'expérimentation 1. |
 | **Justification du choix** | Ce capteur est simple à utiliser, peu coûteux et efficace pour détecter les variations de luminosité. Il est idéal et parfait pour un projet comme celui-ci puisqu’il permet de prendre des décisions automatiques basées sur la lumière. |
-| **Lien vers la documentation** | [Caméra Module 3 du Raspberry PI](https://www.raspberrypi.com/products/camera-module-3/) |
-| **Expérimenté par** | — |
+| **Lien vers la documentation** | [KY-018 Module à photorésistance LDR](https://sensorkit.joy-it.net/fr/sensors/ky-018) |
+| **Expérimenté par** | Alexandre |
 
 
 ---
@@ -81,7 +81,7 @@ Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteur
 
 | Champ | Détail |
 |-------|--------|
-| **Réalisée par** | Alexande |
+| **Réalisée par** | Alexandre |
 | **Technologie(s)** | Arduino uno r3 et Capteur de luminosité (LDR) |
 | **Objectif** | Vérifier si le capteur de luminosité permet de mesurer correctement la quantité de lumière autour d'une plante et de déterminer si elle reçoit suffisamment de lumière pour sa croissance |
 
@@ -89,7 +89,7 @@ Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteur
 
 Cette expérimentation a été réalisée avec un Arduino Uno R3 à la place d'un Raspberry Pi, puisque le capteur de lumière utilisé est un capteur analogique et que l'Arduino possède des broches analogiques natives
 
-1. J'ai branché le capteur sur l'Arduino Uno R3 : la broche **S** sur **A0**, le **+** sur **5V** et le **–** sur **GND**.
+1. J'ai branché le capteur sur l'Arduino Uno R3 : la broche **S** sur **A0** (fil bleu), le **+** sur **5V** (fil blanche) et le **–** sur **GND** (fil rouge).
 2. Ensuite j'ai coder l'Arduino pour lire les valeurs du capteur et les afficher dans le moniteur série. 
 3. J'ai fini par définir des seuils de luminosité pour classifier l'environnement de la plante : trop sombre (< 200), lumière faible (200–500), bonne lumière (500–800) et plein soleil (> 800).
 
