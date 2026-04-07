@@ -94,7 +94,7 @@ Cette expérimentation a été réalisée avec un Arduino Uno R3 à la place d'u
 ![Branchement capteur](img/Alex/photo2.jpg)
 
 <video controls width="600">
-  <source src="img/Alex/video.mp4" type="video/mp4">
+  <source src="{{ '/img/Alex/video.mp4' | relative_url }}" type="video/mp4">
 </video>
 
 #### Résultat
