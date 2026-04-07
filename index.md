@@ -24,10 +24,6 @@ Dans un troisième temps, toutes ces images sont utilisées pour créer une vid�
 
 Dans un quatrième temps, on utilise **OpenCV** pour analyser les images automatiquement. Par exemple, on peut détecter des changements dans la couleur des feuilles, comme du vert vers du jaune. Cela permet au système de donner des indications sur l’**état de santé de la plante**.
 
-Dans un cinquième temps, les données collectées, comme la **luminosité** et l’**humidité**, sont enregistrées dans des fichiers **CSV** ou **JSON**. Cela permet de garder un historique des données et de pouvoir les consulter plus tard pour analyser l’évolution de la plante.
-
-Dans un sixième temps, on teste le **capteur d’humidité** en comparant des conditions de sol sec et humide. Cela permet de voir si les valeurs sont cohérentes et de définir un seuil, par exemple en dessous d’une certaine valeur, pour déclencher automatiquement l’**arrosage de la plante**.
-
 Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteurs, une caméra, du traitement d’images, du stockage de données, une interface web et de l’automatisation dans le but de créer un <mark>système complet, intelligent et autonome</mark> pour la surveillance des plantes.
 
 
