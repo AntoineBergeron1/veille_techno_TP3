@@ -90,6 +90,9 @@ Cette expérimentation a été réalisée avec un Arduino Uno R3 à la place d'u
 3. J'ai fini par définir des seuils de luminosité pour classifier l'environnement de la plante : trop sombre (< 200), lumière faible (200–500), bonne lumière (500–800) et plein soleil (> 800).
 
 #### Photos / Vidéos
+![Description](img/alex/photo1.png)
+![Description](img/alex/photo2.png)
+![Description](img/alex/video.mp4)
 
 #### Résultat
 
@@ -106,8 +109,6 @@ Le capteur fonctionne correctement et réagit bien aux variations de lumière. E
 #### Avis final (1 des 2)
 
 > **Validation de l'hypothèse** — L'expérimentation montre que le capteur est capable de mesurer la luminosité autour d'une plante et de donner des indications sur la quantité de lumière
-
-> **Technologie insatisfaisante** — blablablblablalba
 
 ---
 
