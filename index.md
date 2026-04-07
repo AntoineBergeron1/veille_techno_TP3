@@ -82,7 +82,7 @@ Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteur
 | Champ | Détail |
 |-------|--------|
 | **Réalisée par** | Alexandre |
-| **Technologie(s)** | Arduino uno r3 et Capteur de luminosité (LDR) |
+| **Technologie(s)** | Arduino uno r3 et Capteur de luminosité (LDR) KY-018 |
 | **Objectif** | Vérifier si le capteur de luminosité permet de mesurer correctement la quantité de lumière autour d'une plante et de déterminer si elle reçoit suffisamment de lumière pour sa croissance |
 
 #### Contexte de réalisation
