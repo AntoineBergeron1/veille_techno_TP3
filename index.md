@@ -187,7 +187,7 @@ Par contre, comme les photos ont été prises sur une courte période, le change
 
 #### Avis final (1 des 2)
 
-> **Validation de l'hypothèse** — Cette expérimentation montre que ffmpeg fonctionne bien pour créer un time-lapse. mes deux tests (20 et 30 photos) confirment que plus il y a d’images, plus la vidéo est fluide, ce qui valide l’utilisation de cette technologie pour notre projet Yggdrasil.
+> **Validation de l'hypothèse** — Cette expérimentation montre que ffmpeg fonctionne bien pour créer un time-lapse. Mes deux tests (20 et 30 photos) confirment que plus il y a d’images, plus la vidéo est fluide, ce qui valide l’utilisation de cette technologie pour notre projet Yggdrasil.
 
 
 ---
