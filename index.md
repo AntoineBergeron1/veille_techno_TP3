@@ -109,7 +109,7 @@ Le capteur fonctionne correctement et réagit bien aux variations de lumière. E
 - **Potentiel** : Le capteur pourrait transmettre ses données à un Raspberry Pi ce qui permettrait d'envoyer des notifications automatiques
 - **Limites** : Le capteur mesure uniquement la luminosité ambiante générale
 
-#### Avis final (1 des 2)
+#### Avis final
 
 > **Validation de l'hypothèse** — L'expérimentation montre que le capteur est capable de mesurer la luminosité autour d'une plante et de donner des indications sur la quantité de lumière
 
