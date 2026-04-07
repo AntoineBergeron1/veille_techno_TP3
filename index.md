@@ -66,7 +66,7 @@ Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteur
 | **Usage prévu** | Le capteur de luminosité est utilisé pour mesurer la quantité de lumière autour de la plante. Il permet de déterminer si la plante reçoit assez de lumière ou si elle est dans un environnement trop sombre. On va l'utiliser pour l'expérimentation 1. |
 | **Justification du choix** | Ce capteur est simple à utiliser, peu coûteux et efficace pour détecter les variations de luminosité. Il est idéal et parfait pour un projet comme celui-ci puisqu’il permet de prendre des décisions automatiques basées sur la lumière. |
 | **Lien vers la documentation** | [KY-018 Module à photorésistance LDR](https://sensorkit.joy-it.net/fr/sensors/ky-018) |
-| **Expérimenté par** | Alexandre |
+| **Expérimenté par** | Alexandre Sweeney-Lantin |
 
 
 ---
@@ -140,7 +140,7 @@ Le capteur fonctionne correctement et réagit bien aux variations de lumière. E
 - **Potentiel** : —
 - **Limites** : —
 
-#### Avis final (1 des 2)
+#### Avis final 
 
 > **Validation de l'hypothèse** — blablablabla
 
@@ -186,7 +186,7 @@ Cependant, comme les photos ont été prises sur une courte période, les change
 - **Limites** : Le résultat dépend fortement du nombre d’images et du temps entre chaque prise. Si les photos sont trop rapprochées dans le temps, les changements sont presque invisibles.
 
 
-#### Avis final (1 des 2)
+#### Avis final 
 
 > **Validation de l'hypothèse** — Cette expérimentation démontre que **ffmpeg** permet de créer efficacement une vidéo <mark>time-lapse</mark>. Les tests avec 20 et 30 images confirment que plus il y a d’images, plus la vidéo est fluide, ce qui valide l’utilisation de cette technologie dans le projet <mark>Yggdrasil</mark>.
 
@@ -231,7 +231,7 @@ Les tests ont fonctionné et permettent de suivre l’évolution de la plante. C
 - **Limites** : Si les conditions de prise d’image ne sont pas constantes, les données peuvent être faussées.
 
 
-#### Avis final (1 des 2)
+#### Avis final 
 
 > **Validation de l'hypothèse** — Cette expérimentation montre que <mark>OpenCV</mark> permet d’analyser l’évolution d’une plante, notamment au niveau de la couleur et de la taille, ainsi que de détecter certains changements anormaux.
 
