@@ -175,11 +175,11 @@ Cette expérimentation a été réalisée sur mon ordinateur après avoir instal
 Les deux vidéos générées ainsi qu'une preuve de création : une avec 20 images et une autre avec 30 images.
 
 <video controls width="600">
-  <source src="/veille_techno_TP3/img/Justin/timelapse20.mp4" type="video/mp4">
+  <source src="img/Justin/timelapse20.mp4" type="video/mp4">
 </video>
 
 <video controls width="600">
-  <source src="/veille_techno_TP3/img/Justin/timelapse30.mp4" type="video/mp4">
+  <source src="img/Justin/timelapse30.mp4" type="video/mp4">
 </video>
 
 ![Creation](img/Justin/Preuve_creation.png)
