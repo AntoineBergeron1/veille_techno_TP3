@@ -172,15 +172,24 @@ Cette expérimentation a été réalisée sur mon ordinateur après avoir instal
 
 ### Photos / Vidéos
 
-Les deux vidéos générées ainsi qu'une preuve de création : une avec 20 images et une autre avec 30 images.
+Dans cette section, on retrouve les deux vidéos time-lapse générées à partir des images capturées, ainsi qu’une preuve de création du processus.
+
+#### Time-lapse avec 20 images
+Cette première vidéo a été générée à partir de 20 images de la plante.
 
 <video controls width="600">
   <source src="img/Justin/timelapse20.mp4" type="video/mp4">
 </video>
 
+#### Time-lapse avec 30 images
+Cette deuxième vidéo utilise 30 images, ce qui permet d’obtenir une animation plus fluide que celui de 20.
+
 <video controls width="600">
   <source src="img/Justin/timelapse30.mp4" type="video/mp4">
 </video>
+
+#### Preuve de création
+Capture montrant les fichiers utilisés et le processus de génération.
 
 ![Creation](img/Justin/Preuve_creation.png)
 
