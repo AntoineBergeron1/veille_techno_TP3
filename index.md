@@ -89,23 +89,28 @@ Cette expérimentation a été réalisée avec un Arduino Uno R3 à la place d'u
 2. Ensuite j'ai coder l'Arduino pour lire les valeurs du capteur et les afficher dans le moniteur série. 
 3. J'ai fini par définir des seuils de luminosité pour classifier l'environnement de la plante : trop sombre (< 200), lumière faible (200–500), bonne lumière (500–800) et plein soleil (> 800).
 
-#### Photos / Vidéos
+#### Branchement Arduino
 ![Branchement arduino](img/Alex/photo1.jpg)
+
+#### Branchement du capteur
 ![Branchement capteur](img/Alex/photo2.jpg)
 
+#### Vidéo de démonstration
+Cette vidéo montre le montage en fonctionnement.
+
 <video controls width="600">
-  <source src="{{ '/img/Alex/video.mp4' | relative_url }}" type="video/mp4">
+  <source src="img/Alex/video.mp4" type="video/mp4">
 </video>
 
 #### Résultat
 
-Le capteur fonctionne correctement et réagit bien aux variations de lumière. En couvrant le capteur avec la doigt, les valeurs chutent significativement, ce qui confirme qu'il détecte bien les changements de luminosité. Le système affiche un message indiquant l'état de la lumière pour la plante, par exemple "Bonne lumière" ou "Trop sombre".
+Le capteur fonctionne correctement et réagit bien aux variations de lumière. En couvrant le capteur avec le doigt, les valeurs chutent significativement, ce qui confirme qu'il détecte bien les changements de luminosité. Le système affiche un message indiquant l'état de la lumière pour la plante, par exemple "Bonne lumière" ou "Trop sombre".
 
 
 #### Avis sur la technologie
 
 - **Forces** : Le capteur est très simple à brancher, peu coûteux et réagit très bien aux changements de lumière
-- **Faiblesses** : Contrairement au Raspberry Pi, l'Arduino ne peut pas envoyer des notifications automatiques pour indiquer si la plante n'a pas asser de lumière
+- **Faiblesses** : Contrairement au Raspberry Pi, l'Arduino ne peut pas envoyer des notifications automatiques pour indiquer si la plante n'a pas assez de lumière
 - **Potentiel** : Le capteur pourrait transmettre ses données à un Raspberry Pi ce qui permettrait d'envoyer des notifications automatiques
 - **Limites** : Le capteur mesure uniquement la luminosité ambiante générale
 
