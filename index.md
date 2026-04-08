@@ -153,8 +153,8 @@ Le capteur fonctionne correctement et réagit bien aux variations de lumière. E
 | Champ | Détail |
 |-------|--------|
 | **Réalisée par** | Justin Lavigueur |
-| **Technologie(s)** | - **ffmpeg** : logiciel en ligne de commande pour traiter des vidéos et images<br>- Images **JPEG** prises avec mon téléphone sur ma plante de jade<br>- Mon ordinateur personnel avec **PowerShell**<br>- Un dossier local pour organiser mes images |
-| **Objectif** | Vérifier s’il est possible de créer une vidéo <mark>time-lapse</mark> à partir d’une série de photos d’une plante et observer si le résultat permet de visualiser son évolution |
+| **Technologie(s)** | - **ffmpeg** : logiciel en ligne de commande pour traiter des vidéos et images<br>- Images **PNG** prises avec mon téléphone sur ma plante de jade<br>- Mon ordinateur personnel avec **PowerShell**<br>- Un dossier local pour organiser mes images |
+| **Objectif** | Mon objectif est de vérifier s’il est possible de créer une vidéo <mark>time-lapse</mark> à partir d’une série de photos d’une plante (ma plante dans mon expérimentation) et observer si le résultat permet de visualiser son évolution |
 
 
 #### Contexte de réalisation en étapes
