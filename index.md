@@ -162,14 +162,27 @@ Le capteur fonctionne correctement et réagit bien aux variations de lumière. E
 Cette expérimentation a été réalisée sur mon ordinateur après avoir installé **ffmpeg**. L’objectif était de transformer une série d’images en une vidéo <mark>time-lapse</mark> pour observer l’évolution de ma plante de jade.
 
 1. Dans un premier temps, j’ai installé **ffmpeg** et vérifié son bon fonctionnement dans le terminal **PowerShell** avec une commande simple.
-2. Dans un deuxième temps, j’ai pris plusieurs photos de ma plante en gardant le même angle et le même cadrage afin d’assurer une bonne continuité visuelle.
-3. Ensuite, j’ai placé toutes les images dans un même dossier en les nommant dans un ordre précis (image1, image2, etc.), ce qui est nécessaire pour que **ffmpeg** puisse les lire correctement.
-4. Finalement, j’ai utilisé une commande **ffmpeg** pour transformer les images en une vidéo MP4. J’ai réalisé deux tests : un avec 20 images et un autre avec 30 images afin de comparer les résultats.
+[Installation FFMPEG](img/Justin/FFMPEG_version.png)
+3. Dans un deuxième temps, j’ai pris plusieurs photos de ma plante en gardant le même angle et le même cadrage afin d’assurer une bonne continuité visuelle.
+4. Ensuite, j’ai placé toutes les images dans un même dossier en les nommant dans un ordre précis (image1, image2, etc.), ce qui est nécessaire pour que **ffmpeg** puisse les lire correctement.
+5. Finalement, j’ai utilisé une commande **ffmpeg** pour transformer les images en une vidéo MP4. J’ai réalisé deux tests : un avec 20 images et un autre avec 30 images afin de comparer les résultats.
+[MP4](img/Justin/MP4_1.png)
+[MP4](img/Justin/MP4_2.png)
 
 
 #### Photos / Vidéos
 
-Photos de ma plante de jade prises en série ainsi que deux vidéos générées : une avec 20 images et une autre avec 30 images.
+Les deux vidéos générées ainsi qu'une preuve de création : une avec 20 images et une autre avec 30 images.
+
+<video controls width="600">
+  <source src="{{ '/img/Justin/timelapse20.mp4' | relative_url }}" type="video/mp4">
+</video>
+
+<video controls width="600">
+  <source src="{{ '/img/Justin/timelapse30.mp4' | relative_url }}" type="video/mp4">
+</video>
+
+[Creation](img/Justin/Preuve_creation.png)
 
 
 #### Résultat
