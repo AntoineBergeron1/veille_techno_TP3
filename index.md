@@ -270,7 +270,7 @@ Les tests ont fonctionné et permettent de suivre l’évolution de la plante. C
 ## Schémas
 
 ### Diagramme de l'expérimentation 1 
-![Diagramme expérimentation 1](img/Justin/Experimentation1Diagramme.drawio)
+![Diagramme expérimentation 1](img/Justin/Experimentation1Diagramme.png)
 
 ### Diagramme de l'expérimentation 2 
 ![Diagramme expérimentation 2](img/Justin/Experimentation2Diagramme.drawio)
