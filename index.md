@@ -41,7 +41,7 @@ Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteur
 | **Usage prévu** | On se sert du Raspberry PI comme système principal du projet pour lire les capteurs, contrôler une caméra, traiter les données et héberger sur notre serveur web |
 | **Justification du choix** | Le Raspberry Pi a été choisi parce qu’il est simple à utiliser, peu coûteux et très polyvalent. Il permet de connecter facilement différents capteurs et une caméra grâce aux broches GPIO, ce qui est essentiel pour notre projet. De plus, il est assez puissant pour exécuter plusieurs programmes en même temps comme la lecture des capteurs, le traitement d’images avec OpenCV et l’hébergement d’un serveur web. C’est aussi un outil vraiment populaire dans les projets informatiques dont il existe beaucoup de documentation et d’exemples pour nous aider en cas de problème. Finalement, sa petite taille et sa faible consommation en énergie en font une solution pratique pour un petit système qui doit fonctionner en continuellement. |
 | **Lien vers la documentation** | [Fiche technique du Raspberry Pi](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/) |
-| **Expérimenté par** | Les 4 membres de notre équipe |
+| **Expérimenté par** | Maxime Michaud |
 
 ### Technologie 2 — Raspberry PI Camera Module 3
 
@@ -53,7 +53,7 @@ Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteur
 | **Usage prévu** | La caméra est utilisée pour prendre des photos de la plante à intervalles réguliers. Ces images permettent de suivre son évolution dans le temps et de créer un time-lapse de sa croissance. On va l'utiliser pour l'expérimentation 2 et 3. |
 | **Justification du choix** | Cette caméra de la même compagnie que notre première technologie a été choisie par notre équipe parce qu’elle est compatible directement avec le Raspberry Pi et facile à installer. Elle offre une bonne qualité d’image, ce qui est important pour observer les changements de la plante. En plus de ça, elle supporte l’autofocus, ce qui permet d’avoir des images plus claires sans ajustement manuel et elle est aussi bien documentée. |
 | **Lien vers la documentation** | [Caméra Module 3 du Raspberry PI](https://www.raspberrypi.com/products/camera-module-3/) |
-| **Expérimenté par** | — |
+| **Expérimenté par** | Maxime Michaud |
 
 
 ### Technologie 3 — Capteur de luminosité (LDR)
@@ -108,16 +108,16 @@ Cette vidéo montre le montage en fonctionnement.
 
 #### Résultat
 
-Le capteur fonctionne correctement et <mark>réagit bien aux variations de lumière</mark>. En couvrant le capteur avec le doigt, les valeurs <mark>chutent significativement</mark>, ce qui confirme qu'il détecte bien les changements de luminosité.  
-Le système affiche un message indiquant <mark>l'état de la lumière pour la plante</mark>, par exemple "Bonne lumière" ou "Trop sombre".
+Le capteur fonctionne correctement et réagit bien aux variations de lumière. En couvrant le capteur avec le doigt, les valeurs <mark>chutent significativement</mark>, ce qui confirme qu'il détecte bien les changements de luminosité.  
+Le système affiche un message indiquant l'état de la lumière pour la plante, par exemple "Bonne lumière" ou "Trop sombre".
 
 
 #### Avis sur la technologie
 
-- **Forces** : Le capteur est <mark>très simple à brancher</mark>, <mark>peu coûteux</mark> et <mark>réagit très bien aux changements de lumière</mark>
-- **Faiblesses** : Contrairement au Raspberry Pi, l'Arduino ne peut pas <mark>envoyer des notifications automatiques</mark>
+- **Forces** : Le capteur est très simple à brancher, peu coûteux et <mark>réagit très bien aux changements de lumière</mark>
+- **Faiblesses** : Contrairement au Raspberry Pi, l'Arduino ne peut pas envoyer des notifications automatiques
 - **Potentiel** : Le capteur pourrait transmettre ses données à un Raspberry Pi pour <mark>envoyer des notifications automatiques</mark>
-- **Limites** : Le capteur mesure uniquement la <mark>luminosité ambiante générale</mark>
+- **Limites** : Le capteur mesure uniquement la luminosité ambiante générale
 
 #### Avis final
 
@@ -265,8 +265,16 @@ Les tests ont fonctionné et permettent de suivre l’évolution de la plante. C
 
 > **Validation de l'hypothèse** — Cette expérimentation montre que <mark>OpenCV</mark> permet d’analyser l’évolution d’une plante, notamment au niveau de la couleur et de la taille, ainsi que de détecter certains changements anormaux.
 
-
 ---
+
+## Schémas
+
+### Diagramme de l'expérimentation 1 
+![Diagramme expérimentation 1](img/Justin/Experimentation1_Diagramme.drawio)
+
+### Diagramme de l'expérimentation 2 
+![Diagramme expérimentation 2](img/Justin/Experimentation2_Diagramme.drawio)
+
 ## Sources
 
 1. [Raspberry Pi 4 Model B Specifications](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/) — Documentation officielle du Raspberry Pi qui décrit les caractéristiques techniques et les capacités de la carte utilisée dans le projet.
