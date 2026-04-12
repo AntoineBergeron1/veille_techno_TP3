@@ -164,21 +164,21 @@ Le système affiche un message indiquant <mark>l'état de la lumière pour la pl
 |-------|--------|
 | **Réalisée par** | Justin Lavigueur |
 | **Technologie(s)** | - **ffmpeg** : logiciel en ligne de commande pour traiter des vidéos et images<br>- Images **PNG** prises avec mon téléphone sur ma plante de jade<br>- Mon ordinateur personnel avec **PowerShell**<br>- Un dossier local pour organiser mes images |
-| **Objectif** | Mon objectif est de vérifier s’il est possible de créer une vidéo <mark>time-lapse</mark> à partir d’une série de photos d’une plante et observer si le résultat permet de <mark>visualiser son évolution</mark> |
+| **Objectif** | Vérifier s’il est possible de créer une vidéo <mark>time-lapse</mark> à partir d’une série de photos et observer si le résultat permet de visualiser l’évolution de la plante |
 
 
 #### Contexte de réalisation en étapes
 
-Cette expérimentation a été réalisée sur mon ordinateur après avoir installé **ffmpeg**. L’objectif était de <mark>transformer une série d’images en vidéo</mark> afin d’observer l’évolution de ma plante de jade.
+Cette expérimentation a été réalisée sur mon ordinateur après avoir installé **ffmpeg**. L’objectif était de transformer une série d’images en vidéo afin d’observer l’évolution de ma plante de jade.
 
 1. Dans un premier temps, j’ai installé **ffmpeg** et vérifié son bon fonctionnement dans le terminal **PowerShell**.
 ![Installation FFMPEG](img/Justin/FFMPEG_version.png)
 
-2. Dans un deuxième temps, j’ai pris plusieurs photos de ma plante en gardant <mark>le même angle et le même cadrage</mark> afin d’assurer une bonne continuité visuelle.
+2. Dans un deuxième temps, j’ai pris plusieurs photos de ma plante en gardant le même angle et le même cadrage afin d’assurer une bonne continuité visuelle.
 
-3. Ensuite, j’ai placé toutes les images dans un même dossier en les nommant dans un <mark>ordre précis</mark> (image1, image2, etc.), ce qui est nécessaire pour que **ffmpeg** puisse les lire correctement.
+3. Ensuite, j’ai placé toutes les images dans un même dossier en les nommant dans un ordre précis (image1, image2, etc.).
 
-4. Finalement, j’ai utilisé une commande **ffmpeg** pour <mark>transformer les images en vidéo MP4</mark>.  
+4. Finalement, j’ai utilisé une commande **ffmpeg** pour transformer les images en vidéo MP4.  
 J’ai réalisé deux tests : un avec <mark>20 images</mark> et un autre avec <mark>30 images</mark> afin de comparer les résultats.
 
 ![MP4](img/Justin/MP4_1.png)
@@ -187,45 +187,39 @@ J’ai réalisé deux tests : un avec <mark>20 images</mark> et un autre avec <m
 
 ### Photos / Vidéos
 
-Dans cette section, on retrouve les deux vidéos <mark>time-lapse</mark> générées ainsi qu’une preuve de création du processus.
-
 #### Time-lapse avec 20 images
-Cette première vidéo a été générée à partir de <mark>20 images</mark>.
 
 <video controls width="600">
   <source src="img/Justin/timelapse20.mp4" type="video/mp4">
 </video>
 
 #### Time-lapse avec 30 images
-Cette deuxième vidéo utilise <mark>30 images</mark>, ce qui permet d’obtenir une animation <mark>plus fluide</mark>.
 
 <video controls width="600">
   <source src="img/Justin/timelapse30.mp4" type="video/mp4">
 </video>
 
 #### Preuve de création
-Capture montrant les fichiers utilisés et le processus de génération.
 
 ![Creation](img/Justin/Preuve_creation.png)
 
 
 #### Résultat
 
-Les deux vidéos ont été créées avec succès. Celle contenant <mark>30 images est plus fluide</mark> que celle avec 20 images, ce qui montre que <mark>le nombre d’images influence directement la qualité</mark> du time-lapse.  
-Cependant, comme les photos ont été prises sur une courte période, les changements dans la plante sont <mark>peu visibles</mark>.
+Les deux vidéos ont été créées avec succès. Celle contenant <mark>30 images est plus fluide</mark> que celle avec 20 images, ce qui montre que le nombre d’images influence directement la qualité du time-lapse.  
+Cependant, comme les photos ont été prises sur une courte période, les changements dans la plante sont peu visibles.
 
 #### Avis sur la technologie
 
-- **Forces** : **ffmpeg** est <mark>rapide</mark>, <mark>efficace</mark> et permet de créer facilement une vidéo à partir d’images. C’est aussi un <mark>outil gratuit</mark>.
-- **Faiblesses** : L’outil n’est <mark>pas très intuitif</mark> au début puisqu’il fonctionne en ligne de commande. Il faut aussi une <mark>organisation précise des fichiers</mark>.
-- **Potentiel** : Cette technologie permettrait de <mark>générer automatiquement des vidéos</mark> sur plusieurs jours ou semaines.
-- **Limites** : Le résultat dépend du <mark>nombre d’images</mark> et du <mark>temps entre chaque prise</mark>.
+- **Forces** : **ffmpeg** est rapide, efficace et permet de créer facilement une vidéo à partir d’images. C’est aussi un outil gratuit.
+- **Faiblesses** : L’outil n’est pas très intuitif au début puisqu’il fonctionne en ligne de commande.
+- **Potentiel** : Cette technologie permettrait de générer automatiquement des vidéos sur plusieurs jours ou semaines.
+- **Limites** : Le résultat dépend du nombre d’images et du temps entre chaque prise.
 
 #### Avis final 
 
-> **Validation de l'hypothèse** — Cette expérimentation démontre que **ffmpeg** permet de <mark>créer efficacement un time-lapse</mark>.  
-> Les tests avec <mark>20 et 30 images</mark> confirment que <mark>plus il y a d’images, plus la vidéo est fluide</mark>, ce qui valide son utilisation dans le projet <mark>Yggdrasil</mark>.
-
+> **Validation de l'hypothèse** — Cette expérimentation démontre que **ffmpeg** permet de créer efficacement une vidéo <mark>time-lapse</mark>.  
+> Les tests confirment que <mark>plus il y a d’images, plus la vidéo est fluide</mark>.
 
 ---
 
