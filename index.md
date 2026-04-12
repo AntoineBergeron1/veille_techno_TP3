@@ -87,7 +87,11 @@ Cette expérimentation a été réalisée avec un Arduino Uno R3 à la place d'u
 
 1. J'ai branché le capteur sur l'Arduino Uno R3 : la broche **S** sur **A0** (fil bleu), le **+** sur **5V** (fil blanche) et le **–** sur **GND** (fil rouge).
 2. Ensuite j'ai coder l'Arduino pour lire les valeurs du capteur et les afficher dans le moniteur série. 
-3. J'ai fini par définir des seuils de luminosité pour classifier l'environnement de la plante : trop sombre (< 200), lumière faible (200–500), bonne lumière (500–800) et plein soleil (> 800).
+3. J'ai fini par définir des seuils de luminosité pour classifier l'environnement de la plante :
+   - <mark>trop sombre (&lt; 200)</mark>  
+   - <mark>lumière faible (200–500)</mark>  
+   - <mark>bonne lumière (500–800)</mark>  
+   - <mark>plein soleil (&gt; 800)</mark>
 
 #### Branchement Arduino
 ![Branchement arduino](img/Alex/photo1.jpg)
@@ -104,19 +108,20 @@ Cette vidéo montre le montage en fonctionnement.
 
 #### Résultat
 
-Le capteur fonctionne correctement et réagit bien aux variations de lumière. En couvrant le capteur avec le doigt, les valeurs chutent significativement, ce qui confirme qu'il détecte bien les changements de luminosité. Le système affiche un message indiquant l'état de la lumière pour la plante, par exemple "Bonne lumière" ou "Trop sombre".
+Le capteur fonctionne correctement et <mark>réagit bien aux variations de lumière</mark>. En couvrant le capteur avec le doigt, les valeurs <mark>chutent significativement</mark>, ce qui confirme qu'il détecte bien les changements de luminosité.  
+Le système affiche un message indiquant <mark>l'état de la lumière pour la plante</mark>, par exemple "Bonne lumière" ou "Trop sombre".
 
 
 #### Avis sur la technologie
 
-- **Forces** : Le capteur est très simple à brancher, peu coûteux et réagit très bien aux changements de lumière
-- **Faiblesses** : Contrairement au Raspberry Pi, l'Arduino ne peut pas envoyer des notifications automatiques pour indiquer si la plante n'a pas assez de lumière
-- **Potentiel** : Le capteur pourrait transmettre ses données à un Raspberry Pi ce qui permettrait d'envoyer des notifications automatiques
-- **Limites** : Le capteur mesure uniquement la luminosité ambiante générale
+- **Forces** : Le capteur est <mark>très simple à brancher</mark>, <mark>peu coûteux</mark> et <mark>réagit très bien aux changements de lumière</mark>
+- **Faiblesses** : Contrairement au Raspberry Pi, l'Arduino ne peut pas <mark>envoyer des notifications automatiques</mark>
+- **Potentiel** : Le capteur pourrait transmettre ses données à un Raspberry Pi pour <mark>envoyer des notifications automatiques</mark>
+- **Limites** : Le capteur mesure uniquement la <mark>luminosité ambiante générale</mark>
 
 #### Avis final
 
-> **Validation de l'hypothèse** — L'expérimentation montre que le capteur est capable de mesurer la luminosité autour d'une plante et de donner des indications sur la quantité de lumière
+> **Validation de l'hypothèse** — L'expérimentation montre que le capteur est capable de <mark>mesurer la luminosité</mark> autour d'une plante et de donner des indications sur la quantité de lumière.
 
 ---
 
@@ -159,35 +164,40 @@ Le capteur fonctionne correctement et réagit bien aux variations de lumière. E
 |-------|--------|
 | **Réalisée par** | Justin Lavigueur |
 | **Technologie(s)** | - **ffmpeg** : logiciel en ligne de commande pour traiter des vidéos et images<br>- Images **PNG** prises avec mon téléphone sur ma plante de jade<br>- Mon ordinateur personnel avec **PowerShell**<br>- Un dossier local pour organiser mes images |
-| **Objectif** | Mon objectif est de vérifier s’il est possible de créer une vidéo <mark>time-lapse</mark> à partir d’une série de photos d’une plante (ma plante dans mon expérimentation) et observer si le résultat permet de visualiser son évolution |
+| **Objectif** | Mon objectif est de vérifier s’il est possible de créer une vidéo <mark>time-lapse</mark> à partir d’une série de photos d’une plante et observer si le résultat permet de <mark>visualiser son évolution</mark> |
 
 
 #### Contexte de réalisation en étapes
 
-Cette expérimentation a été réalisée sur mon ordinateur après avoir installé **ffmpeg**. L’objectif était de transformer une série d’images en une vidéo <mark>time-lapse</mark> pour observer l’évolution de ma plante de jade.
+Cette expérimentation a été réalisée sur mon ordinateur après avoir installé **ffmpeg**. L’objectif était de <mark>transformer une série d’images en vidéo</mark> afin d’observer l’évolution de ma plante de jade.
 
-1. Dans un premier temps, j’ai installé **ffmpeg** et vérifié son bon fonctionnement dans le terminal **PowerShell** avec une commande simple.
+1. Dans un premier temps, j’ai installé **ffmpeg** et vérifié son bon fonctionnement dans le terminal **PowerShell**.
 ![Installation FFMPEG](img/Justin/FFMPEG_version.png)
-3. Dans un deuxième temps, j’ai pris plusieurs photos de ma plante en gardant le même angle et le même cadrage afin d’assurer une bonne continuité visuelle.
-4. Ensuite, j’ai placé toutes les images dans un même dossier en les nommant dans un ordre précis (image1, image2, etc.), ce qui est nécessaire pour que **ffmpeg** puisse les lire correctement.
-5. Finalement, j’ai utilisé une commande **ffmpeg** pour transformer les images en une vidéo MP4. J’ai réalisé deux tests : un avec 20 images et un autre avec 30 images afin de comparer les résultats.
+
+2. Dans un deuxième temps, j’ai pris plusieurs photos de ma plante en gardant <mark>le même angle et le même cadrage</mark> afin d’assurer une bonne continuité visuelle.
+
+3. Ensuite, j’ai placé toutes les images dans un même dossier en les nommant dans un <mark>ordre précis</mark> (image1, image2, etc.), ce qui est nécessaire pour que **ffmpeg** puisse les lire correctement.
+
+4. Finalement, j’ai utilisé une commande **ffmpeg** pour <mark>transformer les images en vidéo MP4</mark>.  
+J’ai réalisé deux tests : un avec <mark>20 images</mark> et un autre avec <mark>30 images</mark> afin de comparer les résultats.
+
 ![MP4](img/Justin/MP4_1.png)
 ![MP4](img/Justin/MP4_2.png)
 
 
 ### Photos / Vidéos
 
-Dans cette section, on retrouve les deux vidéos time-lapse générées à partir des images capturées, ainsi qu’une preuve de création du processus.
+Dans cette section, on retrouve les deux vidéos <mark>time-lapse</mark> générées ainsi qu’une preuve de création du processus.
 
 #### Time-lapse avec 20 images
-Cette première vidéo a été générée à partir de 20 images de la plante.
+Cette première vidéo a été générée à partir de <mark>20 images</mark>.
 
 <video controls width="600">
   <source src="img/Justin/timelapse20.mp4" type="video/mp4">
 </video>
 
 #### Time-lapse avec 30 images
-Cette deuxième vidéo utilise 30 images, ce qui permet d’obtenir une animation plus fluide que celui de 20.
+Cette deuxième vidéo utilise <mark>30 images</mark>, ce qui permet d’obtenir une animation <mark>plus fluide</mark>.
 
 <video controls width="600">
   <source src="img/Justin/timelapse30.mp4" type="video/mp4">
@@ -201,21 +211,20 @@ Capture montrant les fichiers utilisés et le processus de génération.
 
 #### Résultat
 
-Les deux vidéos ont été créées avec succès. Celle contenant 30 images est plus fluide que celle avec 20 images, ce qui montre que le nombre d’images influence directement la qualité du <mark>time-lapse</mark>.  
-Cependant, comme les photos ont été prises sur une courte période, les changements dans la plante sont peu visibles, ce qui limite l’effet visuel attendu.
-
+Les deux vidéos ont été créées avec succès. Celle contenant <mark>30 images est plus fluide</mark> que celle avec 20 images, ce qui montre que <mark>le nombre d’images influence directement la qualité</mark> du time-lapse.  
+Cependant, comme les photos ont été prises sur une courte période, les changements dans la plante sont <mark>peu visibles</mark>.
 
 #### Avis sur la technologie
 
-- **Forces** : **ffmpeg** est rapide, efficace et permet de créer facilement une vidéo à partir d’images. Une fois la commande comprise, le processus devient très simple et rapide. De plus, c’est un outil gratuit, ce qui est un avantage important.
-- **Faiblesses** : L’outil n’est pas très intuitif au début puisqu’il fonctionne uniquement en ligne de commande. Il faut aussi organiser les images de manière très précise, sinon la génération de la vidéo ne fonctionne pas correctement.
-- **Potentiel** : Cette technologie est très pertinente pour notre projet puisqu’elle permettrait de générer automatiquement des vidéos montrant l’évolution de la plante sur plusieurs jours ou semaines.
-- **Limites** : Le résultat dépend fortement du nombre d’images et du temps entre chaque prise. Si les photos sont trop rapprochées dans le temps, les changements sont presque invisibles.
-
+- **Forces** : **ffmpeg** est <mark>rapide</mark>, <mark>efficace</mark> et permet de créer facilement une vidéo à partir d’images. C’est aussi un <mark>outil gratuit</mark>.
+- **Faiblesses** : L’outil n’est <mark>pas très intuitif</mark> au début puisqu’il fonctionne en ligne de commande. Il faut aussi une <mark>organisation précise des fichiers</mark>.
+- **Potentiel** : Cette technologie permettrait de <mark>générer automatiquement des vidéos</mark> sur plusieurs jours ou semaines.
+- **Limites** : Le résultat dépend du <mark>nombre d’images</mark> et du <mark>temps entre chaque prise</mark>.
 
 #### Avis final 
 
-> **Validation de l'hypothèse** — Cette expérimentation démontre que **ffmpeg** permet de créer efficacement une vidéo <mark>time-lapse</mark>. Les tests avec 20 et 30 images confirment que plus il y a d’images, plus la vidéo est fluide, ce qui valide l’utilisation de cette technologie dans le projet <mark>Yggdrasil</mark>.
+> **Validation de l'hypothèse** — Cette expérimentation démontre que **ffmpeg** permet de <mark>créer efficacement un time-lapse</mark>.  
+> Les tests avec <mark>20 et 30 images</mark> confirment que <mark>plus il y a d’images, plus la vidéo est fluide</mark>, ce qui valide son utilisation dans le projet <mark>Yggdrasil</mark>.
 
 
 ---
