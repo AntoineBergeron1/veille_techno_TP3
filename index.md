@@ -50,7 +50,7 @@ Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteur
 | **Fabricant** | Raspberry Pi Foundation |
 | **Modèle** | Raspberry PI Camera Module 3 |
 | **Spécifications** | Caméra de 12 mégapixels (Sony IMX708), support de l’autofocus, capture d’images et de vidéos HD, compatibilité avec le Raspberry Pi via le port CSI. Elle a aussi un sensor diagonal large de 7.4mm et une angle de vue de 75 degrès |
-| **Usage prévu** | La caméra est utilisée pour prendre des photos de la plante à intervalles réguliers. Ces images permettent de suivre son évolution dans le temps et de créer un time-lapse de sa croissance. On va l'utiliser pour l'expérimentation 2 et 3. |
+| **Usage prévu** | La caméra est utilisée pour prendre des photos de la plante à intervalles réguliers. Ces images permettent de suivre son évolution dans le temps et de créer un time-lapse de sa croissance. On va l'utiliser pour l'expérimentation 2. |
 | **Justification du choix** | Cette caméra de la même compagnie que notre première technologie a été choisie par notre équipe parce qu’elle est compatible directement avec le Raspberry Pi et facile à installer. Elle offre une bonne qualité d’image, ce qui est important pour observer les changements de la plante. En plus de ça, elle supporte l’autofocus, ce qui permet d’avoir des images plus claires sans ajustement manuel et elle est aussi bien documentée. |
 | **Lien vers la documentation** | [Caméra Module 3 du Raspberry PI](https://www.raspberrypi.com/products/camera-module-3/) |
 | **Expérimenté par** | Maxime Michaud |
@@ -129,32 +129,71 @@ Le système affiche un message indiquant l'état de la lumière pour la plante, 
 
 | Champ | Détail |
 |-------|--------|
-| **Réalisée par** | — |
-| **Technologie(s)** | — |
-| **Objectif** | — |
+| **Réalisée par** | Maxime Michaud |
+| **Technologie(s)** | Raspberry Pi 4 Model B, Raspberry Pi Camera Module 3 (Sony IMX708) et bibliothèque Python **Picamera2** |
+| **Objectif** | Vérifier si la Camera Module 3 permet de capturer automatiquement des images d’une plante à intervalles réguliers pour suivre son évolution dans le temps |
 
 #### Contexte de réalisation
 
-1. Étape 1
-2. Étape 2
-3. Étape 3
+Cette expérimentation a été réalisée avec un **Raspberry Pi 4 Model B** sous **DietPi** (distribution basée sur Debian Trixie, minimaliste et orientée serveur headless) et une **Camera Module 3** branchée au port CSI. DietPi a été retenu pour sa légèreté et son contrôle fin des paquets installés, seuls les composants nécessaires sont présents, sans environnement graphique. Le but était de mettre en place un système de capture automatique d’images.
+
+1. J’ai branché la Camera Module 3 au port CSI du Raspberry Pi en soulevant le clip, en insérant le câble ruban avec les <mark>contacts métalliques vers le côté opposé au clip</mark>, puis en refermant. C’est un détail important, un câble mal orienté empêche la détection.
+2. Après un redémarrage, j’ai vérifié que la caméra était bien détectée avec la commande `rpicam-hello --list-cameras`. Sur Trixie, la caméra est <mark>auto-détectée</mark> grâce à `camera_auto_detect=1` activé par défaut dans `/boot/firmware/config.txt`, donc aucune étape dans raspi-config. La commande m’a confirmé la détection du capteur **imx708**.
+3. J’ai testé une capture manuelle avec `rpicam-still -o test.jpg` pour m’assurer que tout fonctionnait.
+4. DietPi étant une distribution minimaliste, aucune bibliothèque caméra n’est préinstallée. **Picamera2**, la bibliothèque officielle Python pour contrôler la caméra sur Raspberry Pi, a donc été installée manuellement via `sudo apt install python3-picamera2 --no-install-recommends`. Le flag `--no-install-recommends` est essentiel ici, il évite de tirer des dépendances liées à l’interface graphique (Qt, GTK, etc.) qui sont inutiles en contexte headless et alourdiraient considérablement le système.
+5. J’ai écrit un script Python `capture.py` qui ouvre la caméra, active l’autofocus, prend une photo avec un nom contenant la <mark>date et l’heure</mark>, puis ferme la caméra. Voici le code :
+
+```python
+from picamera2 import Picamera2
+from libcamera import controls
+from datetime import datetime
+import time
+import os
+
+output_dir = "/home/dietpi/captures"
+os.makedirs(output_dir, exist_ok=True)
+
+picam2 = Picamera2()
+config = picam2.create_still_configuration(main={"size": (4608, 2592)})
+picam2.configure(config)
+picam2.start()
+picam2.set_controls({"AfMode": controls.AfModeEnum.Continuous})
+time.sleep(2)  # attendre que l’autofocus fasse la mise au point
+
+filename = datetime.now().strftime("plante_%Y%m%d_%H%M%S.jpg")
+filepath = os.path.join(output_dir, filename)
+picam2.capture_file(filepath)
+
+picam2.stop()
+picam2.close()
+```
+
+6. Pour l’automatisation, j’ai utilisé un **crontab** au lieu d’une boucle infinie avec `time.sleep()`, parce qu’avec cron chaque exécution est indépendante et si le script plante une fois, la prochaine capture se fera quand même. J’ai ajouté cette ligne avec `crontab -e` pour capturer <mark>toutes les 15 minutes</mark> :
+
+```
+*/15 * * * * /usr/bin/python3 /home/dietpi/capture.py >> /home/dietpi/capture.log 2>&1
+```
 
 #### Photos / Vidéos
 
+<!-- TODO: Ajouter les photos du montage et des exemples de captures dans img/Maxime/ -->
+
 #### Résultat
+
+La caméra capture des images en <mark>pleine résolution de 4608 x 2592 pixels</mark>. Chaque photo pèse entre 4 et 8 Mo en JPEG. À 96 images par jour (une toutes les 15 minutes), ça représente environ <mark>400 à 750 Mo par jour</mark>. Sur une carte SD de 32 Go, on a assez d’espace pour plusieurs semaines de captures.
+
+L’autofocus par détection de phase (PDAF) fonctionne bien sur une plante. Les images sont nettes sans avoir besoin de régler quoi que ce soit manuellement. J’ai remarqué que l’autofocus pouvait hésiter un peu quand il y avait peu de contraste, mais en éclairage intérieur normal les résultats étaient bons. Ces images pourraient ensuite être réutilisées pour créer un time-lapse ou pour l’analyse avec OpenCV.
 
 #### Avis sur la technologie
 
-- **Forces** : —
-- **Faiblesses** : —
-- **Potentiel** : —
-- **Limites** : —
+- **Forces** : La caméra est facile à brancher et Trixie la détecte automatiquement. L’autofocus est un vrai avantage, les images sont <mark>nettes sans ajustement manuel</mark>. Picamera2 est simple à utiliser en Python.
+- **Faiblesses** : Le câble ruban est fragile et un mauvais branchement empêche la détection sans message d’erreur clair. Les images en faible luminosité sont bruitées.
+- **Potentiel** : On pourrait ajouter un <mark>éclairage LED</mark> contrôlé par le Raspberry Pi pour avoir des conditions constantes et permettre les captures de nuit. Le mode HDR du capteur pourrait aussi aider dans les environnements avec un éclairage variable.
+- **Limites** : Le stockage sur carte SD est limité sur le long terme, il faudrait prévoir un nettoyage automatique ou un transfert réseau. Pour la nuit, il faudrait la variante NoIR de la caméra avec un éclairage infrarouge.
 
 #### Avis final 
 
-> **Validation de l'hypothèse** — blablablabla
-
-> **Technologie insatisfaisante** — blablablabla
+> **Validation de l’hypothèse** — L’expérimentation montre que la Camera Module 3 et Picamera2 permettent de <mark>capturer automatiquement des images</mark> d’une plante à intervalles réguliers. Le système est autonome grâce au crontab et les images sont de bonne qualité grâce à l’autofocus.
 
 ---
 
@@ -280,3 +319,5 @@ Les tests ont fonctionné et permettent de suivre l’évolution de la plante. C
 1. [Raspberry Pi 4 Model B Specifications](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/specifications/) — Documentation officielle du Raspberry Pi qui décrit les caractéristiques techniques et les capacités de la carte utilisée dans le projet.
 2. [Raspberry Pi Camera Module 3](https://www.raspberrypi.com/products/camera-module-3/) — Page officielle présentant les spécifications de la caméra utilisée pour la capture d’images dans le projet.
 3. [FFmpeg Documentation](https://ffmpeg.org/documentation.html) — Documentation officielle de ffmpeg expliquant comment traiter des images et créer des vidéos avec les time-lapses.
+4. [Picamera2 Manual](https://datasheets.raspberrypi.com/camera/picamera2-manual.pdf) — Manuel officiel de la bibliothèque Picamera2 pour le contrôle de la caméra en Python sur Raspberry Pi.
+5. [OpenCV Documentation](https://docs.opencv.org/) — Documentation officielle d'OpenCV utilisée pour l'analyse d'images et la détection de couleurs dans le projet.
