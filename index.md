@@ -285,6 +285,15 @@ Cette expérimentation a été réalisée sur **Visual Studio Code** dans un pro
 ---
 
 #### Photos / Vidéos
+Voici à quoi l'analyse d'une image de plante ressemble. Le rectangle vert sert à identifier la plante.: 
+![Creation](img/Antoine/analyse_plante.png)
+
+Voici à quoi ressemble le tableau de l'évolution des couleurs de la plante. : 
+![Creation](img/Antoine/evolution_couleur.png)
+
+Voici à quoi ressemble le tableau de l'évolution de la taille de la plante. : 
+![Creation](img/Antoine/evolution_taille.png)
+
 
 
 #### Résultat
