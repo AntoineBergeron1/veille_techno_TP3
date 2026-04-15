@@ -62,7 +62,7 @@ Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteur
 |-------|--------|
 | **Fabricant** | Générique (Il s’agit d’un module compatible avec Arduino et Raspberry Pi) |
 | **Modèle** | Capteur de luminosité LDR de type KY-018|
-| **Spécifications** | C'est un capteur basé sur une photorésistance (LDR) qui varie sa résistance selon la lumière avec une sortie analogique ou numérique, une alimentation 3.3V ou 5V, 3 broches (VCC, GND, Signal) |
+| **Spécifications** | Il s’agit d’un capteur basé sur une photorésistance (LDR) qui varie sa résistance selon la lumière avec une sortie analogique ou numérique, une alimentation 3.3V ou 5V, 3 broches (VCC, GND, Signal) |
 | **Usage prévu** | Le capteur de luminosité est utilisé pour mesurer la quantité de lumière autour de la plante. Il permet de déterminer si la plante reçoit assez de lumière ou si elle est dans un environnement trop sombre. On va l'utiliser pour l'expérimentation 1. |
 | **Justification du choix** | Ce capteur est simple à utiliser, peu coûteux et efficace pour détecter les variations de luminosité. Il est idéal pour un projet comme celui-ci puisqu’il permet de prendre des décisions automatiques basées sur la lumière. |
 | **Lien vers la documentation** | [KY-018 Module à photorésistance LDR](https://sensorkit.joy-it.net/fr/sensors/ky-018) |
@@ -83,10 +83,11 @@ Finalement, le projet **Yggdrasil** lie plusieurs technologies comme des capteur
 
 #### Contexte de réalisation
 
-Cette expérimentation a été réalisée avec un Arduino Uno R3 à la place d'un Raspberry Pi, puisque le capteur de lumière utilisé est un capteur analogique et que l'Arduino possède des broches analogiques natives
+Cette expérimentation a été réalisée avec un Arduino Uno R3 à la place d'un Raspberry Pi, puisque le capteur de lumière utilisé est un capteur analogique et que l'Arduino possède des broches analogiques natives.
+Dans le projet final, ces données seront transmises vers le Raspberry Pi pour centraliser les informations concernant la plante.
 
-1. J'ai branché le capteur sur l'Arduino Uno R3 : la broche **S** sur **A0** (fil bleu), le **+** sur **5V** (fil blanche) et le **–** sur **GND** (fil rouge).
-2. Ensuite j'ai coder l'Arduino pour lire les valeurs du capteur et les afficher dans le moniteur série. 
+1. J'ai branché le capteur sur l'Arduino Uno R3 : la broche **S** sur **A0** (fil bleu), le **+** sur **5V** (fil blanc) et le **–** sur **GND** (fil rouge).
+2. Ensuite j'ai codé l'Arduino pour lire les valeurs du capteur et les afficher dans le moniteur série. 
 3. J'ai fini par définir des seuils de luminosité pour classifier l'environnement de la plante :
    - <mark>trop sombre (&lt; 200)</mark>  
    - <mark>lumière faible (200–500)</mark>  
@@ -202,7 +203,7 @@ L’autofocus par détection de phase (PDAF) fonctionne bien sur une plante. Les
 | Champ | Détail |
 |-------|--------|
 | **Réalisée par** | Justin Lavigueur |
-| **Technologie(s)** | - **ffmpeg** : logiciel en ligne de commande pour traiter des vidéos et images<br>- Images **PNG** prises avec mon téléphone sur ma plante de jade<br>- Mon ordinateur personnel avec **PowerShell**<br>- Un dossier local pour organiser mes images |
+| **Technologie(s)** | - **ffmpeg** : logiciel en ligne de commande pour traiter des vidéos et images<br>- Images **PNG** prises avec mon téléphone (iphone 14) de ma plante de jade<br>- Mon ordinateur personnel avec **PowerShell**<br>- Un dossier local pour organiser mes images |
 | **Objectif** | Vérifier s’il est possible de créer une vidéo <mark>time-lapse</mark> à partir d’une série de photos et observer si le résultat permet de visualiser l’évolution de la plante |
 
 
@@ -278,8 +279,8 @@ Cette expérimentation a été réalisée sur **Visual Studio Code** dans un pro
 
 1. Installation d’OpenCV : dans le terminal du projet Python ou dans PowerShell avec la commande `pip install opencv-python`.
 2. Installation de l’interface : `pip install matplotlib`. Cette installation permet d’afficher une interface avec un graphique représentant l’évolution des résultats.
-3. Analyse d’une image : j’ai ensuite créé un projet nommé `analyse_image.py` qui permet d’analyser une image. Le programme distingue la plante du reste en détectant les couleurs présentes, principalement le vert. Il encadre ensuite la plante dans l’image. Ce test n’est pas forcément utile pour le projet final, mais il permet de comprendre le fonctionnement de la détection. Nous pourrons ensuite détecter des problèmes comme des taches, des changements de couleur ou des parties mortes. Comme il n’y avait aucun problème visible sur les photos actuelles, cette fonctionnalité n’a pas pu être testée complètement.
-4. Analyse de l’évolution des couleurs : dans un deuxième programme nommé `analyse_couleur.py`, j’ai parcouru un dossier d’images pour analyser l’évolution de la couleur de la plante dans le temps. Le programme observe les variations du vert. Comme les images ont été prises la même journée, les résultats sont assez stables.
+3. Analyse d’une image : j’ai ensuite créé un projet nommé `analyse_image.py` qui permet d’analyser une image. Le programme distingue la plante du reste en détectant les couleurs présentes, principalement le vert. Il encadre ensuite la plante dans l’image. Ce test n’est pas forcément utile pour le projet final, mais il permet de comprendre le fonctionnement de la détection. Nous pourrons ensuite détecter des problèmes comme des taches, des changements de couleur ou des parties mortes. Comme il n’y avait aucun problème visible sur les photos actuelles, cette fonctionnalité n’a pas pu être testée complètement.Cette limite montre que l’expérimentation devra être poursuivie sur une plus longue période pour obtenir des résultats exploitables.
+4. Analyse de l’évolution des couleurs : dans un deuxième programme nommé `analyse_couleur.py`, j’ai parcouru un dossier d’images pour analyser l’évolution de la couleur de la plante dans le temps. Le programme observe les variations du vert. Comme les images ont été prises la même journée, les résultats restent assez stables.
 5. Analyse de l’évolution de la taille : dans un projet nommé `analyse_taille.py`, j’ai analysé la taille de la plante en fonction du nombre de pixels. Le programme parcourt les images et suit l’évolution de la taille. Cependant, comme les photos ont été prises avec un téléphone, les données sont imprécises à cause de l’angle, de la distance et de l’éclairage. Dans le projet final, une caméra fixe sera utilisée pour obtenir des données plus fiables.
 
 ---
@@ -314,6 +315,12 @@ Les tests ont fonctionné et permettent de suivre l’évolution de la plante. C
 > **Validation de l'hypothèse** — Cette expérimentation montre que <mark>OpenCV</mark> permet d’analyser l’évolution d’une plante, notamment au niveau de la couleur et de la taille, ainsi que de détecter certains changements anormaux.
 
 ---
+
+## Conclusion
+
+Le projet **Yggdrasil** permet de valider qu’il est possible de créer un **système intelligent** pour surveiller une plante à l’aide de plusieurs technologies. Les expérimentations ont démontré que **chaque composant fonctionne correctement** et peut être intégré dans un système complet. Cependant, certaines améliorations pourraient être apportées, notamment au niveau de la <mark>stabilité des prises d’images</mark> et de la <mark>gestion du stockage</mark>.
+
+Le projet est donc <mark>viable</mark> et prêt à évoluer vers un **prototype complet**.
 
 ## Schémas
 
