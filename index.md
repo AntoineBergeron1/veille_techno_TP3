@@ -176,7 +176,7 @@ picam2.close()
 ```
 
 #### Photos / Vidéos
-
+Voici les résultats visuels de l’expérimentation :
 <!-- TODO: Ajouter les photos du montage et des exemples de captures dans img/Maxime/ -->
 
 #### Résultat
@@ -226,6 +226,7 @@ J’ai réalisé deux tests : un avec <mark>20 images</mark> et un autre avec <m
 
 
 ### Photos / Vidéos
+Voici les résultats visuels de l’expérimentation :
 
 #### Time-lapse avec 20 images
 
@@ -286,15 +287,14 @@ Cette expérimentation a été réalisée sur **Visual Studio Code** dans un pro
 ---
 
 #### Photos / Vidéos
-Voici à quoi l'analyse d'une image de plante ressemble. Le rectangle vert sert à identifier la plante.: 
+Voici à quoi l'analyse d'une image de plante ressemble. Le rectangle vert sert à identifier la plante : 
 ![Creation](img/Antoine/analyse_plante.png)
 
-Voici à quoi ressemble le tableau de l'évolution des couleurs de la plante. : 
+Voici à quoi ressemble le tableau de l'évolution des couleurs de la plante : 
 ![Creation](img/Antoine/evolution_couleur.png)
 
-Voici à quoi ressemble le tableau de l'évolution de la taille de la plante. : 
+Voici à quoi ressemble le tableau de l'évolution de la taille de la plante : 
 ![Creation](img/Antoine/evolution_taille.png)
-
 
 
 #### Résultat
