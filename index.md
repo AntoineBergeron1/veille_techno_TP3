@@ -325,7 +325,7 @@ Le projet **Yggdrasil** permet de valider qu’il est possible de créer un **sy
 ### Diagramme de l'expérimentation 1 
 ![Diagramme expérimentation 1](img/Justin/Experimentation1_Diagramme.drawio.png)
 
-### Diagramme de l'expérimentation 2 
+### Diagramme de l'expérimentation 2-3-4 
 ![Diagramme expérimentation 2](img/Justin/Experimentation2_Diagramme.drawio.png)
 
 ## Sources
