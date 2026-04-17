@@ -190,7 +190,7 @@ Voici les résultats visuels de l’expérimentation :
 
 #### Résultat
 
-La caméra capture des images en <mark>pleine résolution de 4608 x 2592 pixels</mark>. Chaque photo pèse entre 4 et 8 Mo en JPEG. À 96 images par jour (une toutes les 15 minutes), ça représente environ <mark>400 à 750 Mo par jour</mark>. Sur une carte SD de 32 Go, on a assez d’espace pour plusieurs semaines de captures.
+La caméra capture des images en <mark>pleine résolution de 4608 x 2592 pixels</mark>. Chaque photo pèse environ 0,5 à 2 Mo en JPEG selon la scène (la compression varie avec le niveau de détail). À 96 images par jour (une toutes les 15 minutes), ça représente environ <mark>50 à 200 Mo par jour</mark>. Sur une carte SD de 32 Go, on a largement assez d’espace pour plusieurs mois de captures.
 
 L’autofocus par détection de phase (PDAF) fonctionne bien sur une plante. Les images sont nettes sans avoir besoin de régler quoi que ce soit manuellement. J’ai remarqué que l’autofocus pouvait hésiter un peu quand il y avait peu de contraste, mais en éclairage intérieur normal les résultats étaient bons. Ces images pourraient ensuite être réutilisées pour créer un time-lapse ou pour l’analyse avec OpenCV.
 
