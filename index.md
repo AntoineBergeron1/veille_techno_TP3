@@ -138,11 +138,13 @@ Le système affiche un message indiquant l'état de la lumière pour la plante, 
 
 Cette expérimentation a été réalisée avec un **Raspberry Pi 4 Model B** sous **DietPi** (distribution basée sur Debian Trixie, minimaliste et orientée serveur headless) et une **Camera Module 3** branchée au port CSI. DietPi a été retenu pour sa légèreté et son contrôle fin des paquets installés, seuls les composants nécessaires sont présents, sans environnement graphique. Le but était de mettre en place un système de capture automatique d’images.
 
-1. J’ai branché la Camera Module 3 au port CSI du Raspberry Pi en soulevant le clip, en insérant le câble ruban avec les <mark>contacts métalliques vers le côté opposé au clip</mark>, puis en refermant. C’est un détail important, un câble mal orienté empêche la détection.
-2. Après un redémarrage, j’ai vérifié que la caméra était bien détectée avec la commande `rpicam-hello --list-cameras`. Sur Trixie, la caméra est <mark>auto-détectée</mark> grâce à `camera_auto_detect=1` activé par défaut dans `/boot/firmware/config.txt`, donc aucune étape dans raspi-config. La commande m’a confirmé la détection du capteur **imx708**.
-3. J’ai testé une capture manuelle avec `rpicam-still -o test.jpg` pour m’assurer que tout fonctionnait.
-4. DietPi étant une distribution minimaliste, aucune bibliothèque caméra n’est préinstallée. **Picamera2**, la bibliothèque officielle Python pour contrôler la caméra sur Raspberry Pi, a donc été installée manuellement via `sudo apt install python3-picamera2 --no-install-recommends`. Le flag `--no-install-recommends` est essentiel ici, il évite de tirer des dépendances liées à l’interface graphique (Qt, GTK, etc.) qui sont inutiles en contexte headless et alourdiraient considérablement le système.
-5. J’ai écrit un script Python `capture.py` qui ouvre la caméra, active l’autofocus, prend une photo avec un nom contenant la <mark>date et l’heure</mark>, puis ferme la caméra. Voici le code :
+1. J’ai éteint le Raspberry Pi et débranché l’alimentation avant de brancher la caméra. J’ai ensuite branché la Camera Module 3 au port CSI du Raspberry Pi en soulevant le clip, en insérant le câble ruban avec les <mark>contacts métalliques vers le côté opposé au clip</mark> (face aux ports HDMI), puis en refermant. C’est un détail important, un câble mal orienté empêche la détection.
+2. DietPi désactive le support caméra par défaut pour économiser les ressources. Avant de pouvoir utiliser la caméra, j’ai activé le support avec la commande `dietpi-set_hardware rpi-camera enable`, qui ajoute `start_x=1`, augmente la mémoire GPU à 96 Mo et retire les blacklists de modules caméra. J’ai aussi ajouté `camera_auto_detect=1` et `dtoverlay=vc4-kms-v3d` dans `/boot/firmware/config.txt`, ce dernier étant nécessaire pour que le stack libcamera moderne fonctionne.
+3. DietPi étant une distribution minimaliste, les outils caméra ne sont pas préinstallés. J’ai installé `rpicam-apps-lite` (version sans interface graphique) avec `sudo apt install rpicam-apps-lite`, qui fournit les commandes `rpicam-hello` et `rpicam-still`.
+4. Après un redémarrage, j’ai vérifié que la caméra était bien détectée avec la commande `rpicam-hello --list-cameras`. La commande m’a confirmé la détection du capteur **imx708** avec ses trois modes de résolution (4608x2592, 2304x1296 et 1536x864).
+5. J’ai testé une capture manuelle avec `rpicam-still -o test.jpg` pour m’assurer que tout fonctionnait.
+6. J’ai ensuite installé **Picamera2**, la bibliothèque officielle Python pour contrôler la caméra sur Raspberry Pi, via `sudo apt install python3-picamera2 --no-install-recommends`. Le flag `--no-install-recommends` est essentiel ici, il évite de tirer des dépendances liées à l’interface graphique (Qt, GTK, etc.) qui sont inutiles en contexte headless et alourdiraient considérablement le système.
+7. J’ai écrit un script Python `capture.py` qui ouvre la caméra, active l’autofocus, prend une photo avec un nom contenant la <mark>date et l’heure</mark>, puis ferme la caméra. Voici le code :
 
 ```python
 from picamera2 import Picamera2
@@ -169,7 +171,7 @@ picam2.stop()
 picam2.close()
 ```
 
-6. Pour l’automatisation, j’ai utilisé un **crontab** au lieu d’une boucle infinie avec `time.sleep()`, parce qu’avec cron chaque exécution est indépendante et si le script plante une fois, la prochaine capture se fera quand même. J’ai ajouté cette ligne avec `crontab -e` pour capturer <mark>toutes les 15 minutes</mark> :
+8. Pour l’automatisation, j’ai utilisé un **crontab** au lieu d’une boucle infinie avec `time.sleep()`, parce qu’avec cron chaque exécution est indépendante et si le script plante une fois, la prochaine capture se fera quand même. J’ai ajouté cette ligne avec `crontab -e` pour capturer <mark>toutes les 15 minutes</mark> :
 
 ```
 */15 * * * * /usr/bin/python3 /home/dietpi/capture.py >> /home/dietpi/capture.log 2>&1
