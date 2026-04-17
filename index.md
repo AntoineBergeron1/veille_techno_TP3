@@ -196,7 +196,7 @@ L’autofocus par détection de phase (PDAF) fonctionne bien sur une plante. Les
 
 #### Avis sur la technologie
 
-- **Forces** : La caméra est facile à brancher et Trixie la détecte automatiquement. L’autofocus est un vrai avantage, les images sont <mark>nettes sans ajustement manuel</mark>. Picamera2 est simple à utiliser en Python.
+- **Forces** : La caméra s’intègre nativement à l’écosystème Raspberry Pi via libcamera, sans driver tiers à compiler. L’autofocus PDAF est un vrai avantage, les images sont <mark>nettes sans ajustement manuel</mark>. Picamera2 offre une API Python claire et bien documentée.
 - **Faiblesses** : Le câble ruban est fragile et un mauvais branchement empêche la détection sans message d’erreur clair. Les images en faible luminosité sont bruitées.
 - **Potentiel** : On pourrait ajouter un <mark>éclairage LED</mark> contrôlé par le Raspberry Pi pour avoir des conditions constantes et permettre les captures de nuit. Le mode HDR du capteur pourrait aussi aider dans les environnements avec un éclairage variable.
 - **Limites** : Le stockage sur carte SD est limité sur le long terme, il faudrait prévoir un nettoyage automatique ou un transfert réseau. Pour la nuit, il faudrait la variante NoIR de la caméra avec un éclairage infrarouge.
