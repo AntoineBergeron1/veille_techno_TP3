@@ -179,7 +179,14 @@ picam2.close()
 
 #### Photos / Vidéos
 Voici les résultats visuels de l’expérimentation :
-<!-- TODO: Ajouter les photos du montage et des exemples de captures dans img/Maxime/ -->
+
+**Montage de la Camera Module 3 branchée au port CSI du Raspberry Pi 4 :**
+
+![Montage Camera Module 3 sur Raspberry Pi 4](img/Maxime/montage_camera.jpg)
+
+**Exemple de capture automatique prise par le script `capture.py` (4608x2592 pixels) :**
+
+![Capture exemple avec autofocus](img/Maxime/capture_exemple.jpg)
 
 #### Résultat
 
